@@ -63,3 +63,7 @@
     margin: 0;
     font: inherit;
 }
+h1{
+    color: var(--color-primary-light);
+    background: #ff7d57;
+}
