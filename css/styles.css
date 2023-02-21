@@ -1,0 +1,65 @@
+:root {
+    /* established color palette */
+    --color-primary-light: #4E596F;
+    --color-primary: #242A38;
+    --color-primary-dark: #1b1e2a;
+
+    --color-accent-light: #ff7d57;
+    --color-accent: #ff7d57;
+    --color-accent-dark: #ff7d57;
+
+    --color-neutral-light: #ff7d57;
+    --color-neutral: #ff7d57;
+    --color-neutral-dark: #ff7d57;
+
+    --color-white: #fff;
+    --color-accent-gradient: linear-gradient(to bottom right, var(--color-accent-light), var(--color-accent-dark));
+    --color-primary-gradient: linear-gradient(to bottom right, var(--color-primary-light), var(--color-primary-dark));
+
+
+    /* established font family, font weights, and font sizes */
+    --ff-primary: 'Montserrat', sans-serif;
+    --ff-heading: var(--ff-primary);
+    --ff-body: var(--ff-primary);
+
+    --fw-light: 300;
+    --fw-medium: 500;
+    --fw-bold: 700;
+    --fw-black: 900;
+
+    --fs-300: .75rem;
+    --fs-400: .875rem;
+    --fs-500: 1rem;
+    --fs-600: 1.25rem;
+    --fs-700: 1.5rem;
+    --fs-800: 2rem;
+    --fs-900: 3rem;
+
+    --fs-logo : var(--fs-700);
+    --fs-tagline: var(--fs-400);
+    --fs-button: var(--fs-300);
+    --fs-header: var(--fs-600);
+    --fs-body: var(--fs-600);
+
+    /* Established Sizes and Widths */
+    --size-nav-bar-element-height: 2rem;
+    --size-coffee-tile-height: 20rem;
+    --size-coffee-tile-width: 12rem;
+
+    /* Established Spacing of elements*/
+    --gap-coffee-tiles: 3rem;
+    --gap-nav-bar-elements: .5rem;
+    --margin-nav-bar-section: 10rem;
+    --margin-left-main-section: 3rem;
+    --padding-input-elements: .5rem;
+    --border-radius-buttons: .5rem;
+    --border-radius-coffee-tiles: 1rem;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+}
