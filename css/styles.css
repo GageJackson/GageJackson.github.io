@@ -4,15 +4,17 @@
     --color-primary: #242A38;
     --color-primary-dark: #1b1e2a;
 
-    --color-accent-light: #ff7d57;
-    --color-accent: #ff7d57;
-    --color-accent-dark: #ff7d57;
+    --color-accent-light: #E4C19D;
+    --color-accent: #C3A185;
+    --color-accent-dark: #9D816B;
 
-    --color-neutral-light: #ff7d57;
-    --color-neutral: #ff7d57;
-    --color-neutral-dark: #ff7d57;
+    --color-white: #BCBCBC;
+    --color-neutral-1: #929292;
+    --color-neutral-2: #616161;
+    --color-neutral-3: #505050;
+    --color-neutral-4: #383838;
+    --color-neutral-5: #222222;
 
-    --color-white: #fff;
     --color-accent-gradient: linear-gradient(to bottom right, var(--color-accent-light), var(--color-accent-dark));
     --color-primary-gradient: linear-gradient(to bottom right, var(--color-primary-light), var(--color-primary-dark));
 
@@ -47,7 +49,7 @@
     --size-coffee-tile-width: 12rem;
 
     /* Established Spacing of elements*/
-    --gap-coffee-tiles: 3rem;
+    --gap: 2rem;
     --gap-nav-bar-elements: .5rem;
     --margin-nav-bar-section: 10rem;
     --margin-left-main-section: 3rem;
@@ -55,6 +57,7 @@
     --border-radius-buttons: .5rem;
     --border-radius-coffee-tiles: 1rem;
 }
+
 *,
 *::before,
 *::after {
@@ -63,7 +66,76 @@
     margin: 0;
     font: inherit;
 }
-h1{
-    color: var(--color-primary-light);
-    background: #ff7d57;
+/* general */
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid{
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.d-block {
+    display: block;
+}
+
+
+/* body */
+html {
+    height:100%;
+}
+
+body {
+    background: linear-gradient(135deg, var(--color-neutral-2), var(--color-neutral-4)) no-repeat;
+}
+
+.sr-only {
+    height: 1px;
+    width: 1px;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+
+    display: none;
+    visibility: hidden;
+
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+}
+
+/* primary header */
+.logo {
+    margin: 2rem;
+}
+
+.primary-header {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.primary-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    background: hsl(0 0% 100% / .1) no-repeat;
+    backdrop-filter: blur(1rem);
+}
+
+.primary-nav a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+@media (max-width: 35em) {
+    .primary-nav{
+        position: fixed;
+        flex-direction: column;
+        --gap: 3rem;
+
+        padding: min(30vh, 10rem) 2rem;
+        inset: 0 0 0 30%;
+    }
 }
