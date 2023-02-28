@@ -8,20 +8,27 @@
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <title>Gage Jackson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 <main>
+    <!-- header section -->
     <header class="primary-header flex">
         <div>
-            <span>Gage</span>
+            <span id="logo">GAGE</span>
         </div>
 
-        <button><span class="sr-only" hidden="hidden">Menu</span>Hamburger</button>
+        <button id="btn-nav" class="mobile-nav-toggle"
+                aria-controls="primary-nav" aria-expanded="false">
+            <span class="sr-only" hidden="hidden">Menu</span>
+        </button>
 
         <nav>
-            <ul id="primary-nav" class="primary-nav flex">
+            <ul id="primary-nav" class="primary-nav flex" data-visible="false">
                 <li class="active">
                     <a href="index.html">
                         Home
@@ -40,6 +47,7 @@
             </ul>
         </nav>
     </header>
+
     <section>
         <h2>Connect with me</h2>
 
@@ -52,5 +60,7 @@
 <script src="bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
 <!-- My JS -->
 <script src="js/main.js"></script>
+<!-- Nav JS -->
+<script src="js/nav.js"></script>
 </body>
 </html>
