@@ -8,12 +8,12 @@
     --color-accent: #C3A185;
     --color-accent-dark: #9D816B;
 
-    --color-white: #BCBCBC;
-    --color-neutral-1: #929292;
-    --color-neutral-2: #616161;
-    --color-neutral-3: #505050;
-    --color-neutral-4: #383838;
-    --color-neutral-5: #222222;
+    --color-white: #bacacc;
+    --color-neutral-1: #838f91;
+    --color-neutral-2: #5e5252;
+    --color-neutral-3: #4d5052;
+    --color-neutral-4: #363131;
+    --color-neutral-5: #1c1e1f;
 
     --color-accent-gradient: linear-gradient(to bottom right, var(--color-accent-light), var(--color-accent-dark));
     --color-primary-gradient: linear-gradient(to bottom right, var(--color-primary-light), var(--color-primary-dark));
@@ -29,12 +29,13 @@
     --fw-bold: 700;
     --fw-black: 900;
 
-    --fs-300: .75rem;
-    --fs-400: .875rem;
-    --fs-500: 1rem;
-    --fs-600: 1.25rem;
-    --fs-700: 1.5rem;
-    --fs-800: 2rem;
+    --fs-200: .75rem;
+    --fs-300: .875rem;
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-700: 2rem;
+    --fs-800: 2.5rem;
     --fs-900: 3rem;
 
     --ff-logo: var(--ff-primary);
@@ -91,10 +92,26 @@ html {
     width: 100%;
 }
 
-body {
-    background: linear-gradient(135deg, var(--color-neutral-3), var(--color-neutral-5)) no-repeat;
+body.dark-mode {
+    background-color: var(--color-neutral-5);
+    background-image: linear-gradient(135deg, var(--color-neutral-3), var(--color-neutral-5));
+    background-repeat: no-repeat;
     /*overflow-x: hidden;*/
 }
+body.light-mode {
+    background-color: var(--color-neutral-1);
+    background-image: linear-gradient(135deg, var(--color-neutral-1), var(--color-neutral-3));
+    background-repeat: no-repeat;
+    /*overflow-x: hidden;*/
+}
+
+h2[data-darkMode="true"] {
+    color: #0a53be;
+}
+h2[data-darkMode="false"] {
+     color: #0dcaf0;
+ }
+
 
 .sr-only {
     height: 1px;
@@ -135,8 +152,10 @@ body {
 
 .primary-nav {
     list-style: none;
-    padding: 0;
-    margin: 0;
+
+    --gap: clamp(1.5rem, 5vw, 3rem);
+    padding-block: 1.5rem;
+    padding-inline: clamp(1rem, 5vw ,10rem);
 
     background: hsl(0 0% 100% / .05) no-repeat;
     backdrop-filter: blur(.5rem);
@@ -152,7 +171,12 @@ body {
     position: fixed;
 }
 
-@media (max-width: 35em) {
+#dark-mode-toggle {
+    padding: 0;
+}
+
+
+@media (max-width: 40rem){
     .primary-nav{
         position: fixed;
         z-index: 1000;
@@ -197,14 +221,16 @@ body {
     }
 }
 
-@media (min-width: 35em) and (max-width: 55em) {
+@media (min-width: 50rem){
+    .primary-nav {
 
+    }
 }
 
-@media (min-width: 35em){
-    .primary-nav {
-        --gap: clamp(1.5rem, 5vw, 3rem);
-        padding-block: 1.5rem;
-        padding-inline: clamp(3rem, 10vw ,10rem);
+@media (max-width: 28rem){
+    #logo {
+        font-size: clamp(2rem, 10vw, 5rem);
+        top: .25rem;
+        left: .25rem;
     }
 }
