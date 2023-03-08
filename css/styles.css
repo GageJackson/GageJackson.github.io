@@ -92,25 +92,23 @@ html {
     width: 100%;
 }
 
-body.dark-mode {
+body[data-darkMode="true"] {
     background-color: var(--color-neutral-5);
     background-image: linear-gradient(135deg, var(--color-neutral-3), var(--color-neutral-5));
     background-repeat: no-repeat;
     /*overflow-x: hidden;*/
 }
-body.light-mode {
+
+body {
     background-color: var(--color-neutral-1);
     background-image: linear-gradient(135deg, var(--color-neutral-1), var(--color-neutral-3));
     background-repeat: no-repeat;
     /*overflow-x: hidden;*/
 }
 
-h2[data-darkMode="true"] {
+*[data-darkMode="true"] {
     color: #0a53be;
 }
-h2[data-darkMode="false"] {
-     color: #0dcaf0;
- }
 
 
 .sr-only {

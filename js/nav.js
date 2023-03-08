@@ -1,8 +1,9 @@
 const primaryNav = document.querySelector('.primary-nav');
 const navToggle = document.querySelector('.mobile-nav-toggle');
 const darkModeToggle = document.querySelector('#dark-mode-toggle');
-const darkBody = document.querySelector('body');
-const darkMode = localStorage.getItem("theme");
+const darkElements = document.querySelectorAll('.dark-mode');
+const darkModeStorage = localStorage.getItem("darkMode");
+let darkMode = darkModeStorage;
 
 navToggle.addEventListener('click', () => {
     const visibility = primaryNav.getAttribute("data-visible");
@@ -15,27 +16,24 @@ navToggle.addEventListener('click', () => {
         navToggle.setAttribute("aria-expanded", "false");
     }
     console.log(visibility);
-})
+});
 
 darkModeToggle.addEventListener('click', () => {
-    const darkModeStatus = document.body.getAttribute('class');
-    let darkMode;
-    if( darkModeStatus === 'light-mode'){
-        document.body.setAttribute('class','dark-mode')
-        darkMode = true;
-    } else if (darkModeStatus === 'dark-mode'){
-        document.body.setAttribute('class','light-mode')
-        darkMode = false;
+    if(darkMode === 'true'){
+        darkMode = 'false';
+        darkModeToggle.innerText = "Dark Mode";
+    } else {
+        darkMode = 'true';
+        darkModeToggle.innerText = "Light Mode";
     }
-    localStorage.setItem("theme",darkMode);
+    doDarkMode();
+    localStorage.setItem("darkMode",darkMode);
 });
 
 function doDarkMode(){
-    if( darkMode === 'false'){
-        document.body.setAttribute('class','light-mode')
-    } else if (darkMode === 'true'){
-        document.body.setAttribute('class','dark-mode')
-    }
+    darkElements.forEach(function(element) {
+        element.setAttribute('data-darkMode', darkMode);
+    });
 }
 
-doDarkMode();
+doDarkMode(darkMode);
