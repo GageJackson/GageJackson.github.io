@@ -15,7 +15,7 @@ let accumulatedTime = 0;
 let accumulatedFrames = 0;
 
 // blocks (numCircles * 2 * size must be less than 600 for this example)
-let numCircles = 15;
+let numCircles = 30;
 let circles = [];
 let velocity = 1;
 let size = 125;
@@ -51,7 +51,7 @@ function main(timestamp) {
 }
 
 function update() {
-    for (let i = 0; i < numCircles; i++) {
+    for (let i = 0; i < circles.length; i++) {
         let circle = circles[i];
         circle.x += circle.vx;
         circle.y += circle.vy;
@@ -71,21 +71,9 @@ function update() {
 function render() {
     ctx.clearRect(0, 0, cw, ch);
     // circles
-    for (let i = 0; i < numCircles; i++) {
-        // Create a radial gradient
-        // The inner circle is at x=110, y=90, with radius=30
-        // The outer circle is at x=100, y=100, with radius=70
-        const gradient = ctx.createRadialGradient((cw/2), 0, 0, (cw/2), 100, 1200);
-        //const gradient = ctx.createRadialGradient(circles[i].x, circles[i].y, 0, circles[i].x, circles[i].y, circles[i].size);
-
-        // Add three color stops
-        gradient.addColorStop(0, "hsl(0,40%,60%)");
-        gradient.addColorStop(0.5, "hsl(0,77%,29%)");
-        gradient.addColorStop(1, "hsl(0,100%,11%)");
-
+    for (let i = 0; i < circles.length; i++) {
         // Set the fill style and draw a rectangle
-        ctx.fillStyle = gradient;
-        //ctx.fillStyle = 'green';
+        ctx.fillStyle = circles[i].gradient;
         ctx.beginPath();
         ctx.arc(circles[i].x, circles[i].y, circles[i].size, 0, 2 * Math.PI, false);
         ctx.fill();
@@ -100,10 +88,25 @@ function render() {
 // create the circles
 for (let i = 0; i < numCircles; i++) {
     let randSize = Math.random() * size;
+
+    // Create a radial gradient
+    // The inner circle is at x=110, y=90, with radius=30
+    // The outer circle is at x=100, y=100, with radius=70
+    const gradient = ctx.createRadialGradient((cw/2), 0, 0, (cw/2), 0, 1000);
+    //const gradient = ctx.createRadialGradient(circles[i].x, circles[i].y, 0, circles[i].x, circles[i].y, circles[i].size);
+
+    // Add three color stops
+    gradient.addColorStop(0, "hsla(9, 84%, 55%, 1)");
+    gradient.addColorStop(0.5, "hsla(330, 66%, 41%, 1)");
+    gradient.addColorStop(1, "hsla(228, 33%, 16%, 1)");
+
     circles.push({
         size: randSize,
-        x: 2 * randSize * i,
-        y: Math.random() * (ch - 2 * randSize) + randSize,
+        gradient: gradient,
+        x: (Math.random() - 0.5)* cw/2 + cw/2,
+        y: (Math.random() - 0.5)* ch/2 + ch/2,
+        //x: 2 * randSize * i,
+        //y: Math.random() * (ch - 2 * randSize) + randSize,
         vx: (Math.random() - 0.5) * velocity * 1,
         vy: (Math.random() - 0.5) * velocity * 0.25
     });

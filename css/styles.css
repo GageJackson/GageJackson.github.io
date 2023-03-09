@@ -4,19 +4,23 @@
     --color-primary: #242A38;
     --color-primary-dark: #1b1e2a;
 
-    --color-accent-light: #E4C19D;
-    --color-accent: #C3A185;
-    --color-accent-dark: #9D816B;
+    --color-accent-light: #d94337;
+    --color-accent: #b22c5d;
+    --color-accent-dark: #452144;
+
+    --color-tertiary-light: #ebcc50;
+    --color-tertiary-dark: #e57b3a;
 
     --color-white: #bacacc;
     --color-neutral-1: #dadada;
     --color-neutral-2: #d7d7d7;
     --color-neutral-3: #979797;
     --color-neutral-4: #797979;
-    --color-neutral-5: #252525;
+    --color-neutral-5: #34373b;
 
     --color-accent-gradient: linear-gradient(to bottom right, var(--color-accent-light), var(--color-accent-dark));
     --color-primary-gradient: linear-gradient(to bottom right, var(--color-primary-light), var(--color-primary-dark));
+    --color-tertiary-gradient: linear-gradient(to bottom right, var(--color-tertiary-light), var(--color-tertiary-dark));
 
 
     /* established font family, font weights, and font sizes */
@@ -29,17 +33,18 @@
     --fw-bold: 700;
     --fw-black: 900;
 
-    --fs-200: .75rem;
-    --fs-300: .875rem;
-    --fs-400: 1rem;
-    --fs-500: 1.25rem;
-    --fs-600: 1.5rem;
-    --fs-700: 2rem;
-    --fs-800: 2.5rem;
-    --fs-900: 3rem;
+    /* font-sizes */
+    --fs-900: 9.375rem;
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-500: 1.75rem;
+    --fs-400: 1.125rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
 
     --ff-logo: var(--ff-primary);
-    --fs-logo: var(--fs-900);
+    --fs-logo: 3rem;
     --fw-logo: var(--fw-black);
 
     --fs-tagline: var(--fs-400);
@@ -93,8 +98,12 @@ html {
 }
 
 body[data-darkMode="true"] {
+    background-color: #172233;
+    /*
     background-color: var(--color-neutral-5);
     background-image: linear-gradient(135deg, var(--color-neutral-3), var(--color-neutral-5));
+
+     */
     background-repeat: no-repeat;
     background-attachment: fixed;
     /*overflow-x: hidden;*/
@@ -102,17 +111,28 @@ body[data-darkMode="true"] {
 
 body {
     background-color: var(--color-neutral-1);
+    /*
+    background-color: var(--color-neutral-1);
     background-image: linear-gradient(135deg, var(--color-neutral-1), var(--color-neutral-3));
+
+     */
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100%;
     font-family: var(--ff-body);
     color: var(--color-neutral-5);
-    /*overflow-x: hidden;*/
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: var(--fs-800);
+    font-weight: var(--fw-bold);
+    margin: 15rem auto .5rem auto;
+    text-align: center;
 }
 
 *[data-darkMode="true"] {
-    color: #0a53be;
+    color: var(--color-white);
 }
 
 
@@ -142,8 +162,6 @@ body {
     font-weight: var(--fw-logo);
     font-style: italic;
 
-    color: var(--color-primary);
-
     user-select: none;
 }
 
@@ -166,7 +184,7 @@ body {
 
 .primary-nav a {
     text-decoration: none;
-    color: var(--color-neutral-5);
+    color: inherit;
 }
 
 .mobile-nav-toggle {
@@ -176,8 +194,20 @@ body {
 
 #dark-mode-toggle {
     padding: 0;
+    color: var(--color-accent-light);
 }
 
+#continueButton {
+    margin: 0 auto;
+    padding: .5rem 1rem;
+    color: var(--color-primary-dark);
+    background-image: var(--color-tertiary-gradient);
+    border-radius: .5rem;
+}
+#continueButton:hover {
+    color: var(--color-accent-light);
+    outline: var(--color-accent-light) solid 2px;
+}
 
 @media (max-width: 40rem){
     .primary-nav{
@@ -243,7 +273,8 @@ body {
 }
 
 .glassPane {
-    background: hsla(0 0% 100% / 0.15);
+    background: hsla(0 0% 50% / 0.15);
+    border: var(--color-neutral-3) solid 1px;
     border-radius: 20px;
     backdrop-filter: blur(.25rem);
     height: 800px;
@@ -256,16 +287,20 @@ body {
     justify-content: center;
 }
 
-.containerChild {
+.container > * {
     position: absolute;
 }
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+}
 
-#gameCanvas {
-
+section {
+    margin-top: 3rem;
 }
 
 button {
  background: none;
     border: none;
-
 }

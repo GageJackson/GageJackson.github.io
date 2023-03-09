@@ -21,10 +21,8 @@ navToggle.addEventListener('click', () => {
 darkModeToggle.addEventListener('click', () => {
     if(darkMode === 'true'){
         darkMode = 'false';
-        darkModeToggle.innerText = "Dark Mode";
     } else {
         darkMode = 'true';
-        darkModeToggle.innerText = "Light Mode";
     }
     doDarkMode();
     localStorage.setItem("darkMode",darkMode);
@@ -34,6 +32,12 @@ function doDarkMode(){
     darkElements.forEach(function(element) {
         element.setAttribute('data-darkMode', darkMode);
     });
+
+    if(darkMode === 'true'){
+        darkModeToggle.innerText = "Light Mode";
+    } else {
+        darkModeToggle.innerText = "Dark Mode";
+    }
 }
 
 doDarkMode(darkMode);
