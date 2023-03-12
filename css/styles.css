@@ -187,18 +187,41 @@ h1 {
     color: var(--color-tertiary-dark);
 }
 
-#continueButton {
+.gooButton {
     margin: 1rem auto;
-    padding: .5rem 1rem;
     aspect-ratio: 1;
     color: var(--color-primary-dark);
-    background-image: var(--color-tertiary-gradient);
+    background-color: var(--color-tertiary-dark);
     border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding: 12px 24px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
-#continueButton:hover {
+.gooButton:hover {
     color: var(--color-accent-light);
-    outline: var(--color-accent-light) solid 2px;
+    transform: scale(1.1);
 }
+.gooContainer {
+    position: relative;
+    display: inline-block;
+}
+.goo {
+    background-color: var(--color-tertiary-dark);
+    height: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
 
 @media (max-width: 40rem){
     .primary-nav{
@@ -285,10 +308,13 @@ button {
 }
 
 .bgGoo {
-    filter: url('#blur-contrast-composite');
     grid-row: 1 / -1;
     grid-column: 1 / -1;
     z-index: -1;
+}
+
+.gooey {
+    filter: url('#blur-contrast-composite');
 }
 
 .glassOverlay {

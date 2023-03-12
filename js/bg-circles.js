@@ -107,8 +107,6 @@ function render() {
 // create the circles
 for (let i = 0; i < numCircles; i++) {
     let randSize = Math.random() * size;
-    console.log("size: " + randSize);
-
 
     // Create a radial gradient
     const gradient = ctx.createRadialGradient((cw/2), 0, 0, (cw/2), 0, ch * 1.25);
