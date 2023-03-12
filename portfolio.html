@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body  class="dark-mode" data-darkMode="true">
+<body class="dark-mode" data-darkMode="true">
 <main>
   <!-- header section -->
   <header class="primary-header flex">
@@ -21,7 +21,7 @@
       <span id="logo">Gage Jackson</span>
     </div>
 
-    <button id="btn-nav" class="mobile-nav-toggle"
+    <button id="btn-nav" class="mobile-nav-toggle btn"
             aria-controls="primary-nav" aria-expanded="false">
       <span class="sr-only" hidden="hidden">Menu</span>
     </button>
@@ -39,8 +39,8 @@
           </a>
         </li>
         <li>
-          <a href="resume.html">
-            Resume
+          <a href="about-me.html">
+            About Me
           </a>
         </li>
         <li>
@@ -51,20 +51,17 @@
       </ul>
     </nav>
   </header>
-
   <section>
     <div class="container">
-      <canvas id="canvas" class="circleGooification" width="1200px" height="800px"></canvas>
-      <div class="glassPane"></div>
-      <div class="content">
-        <h1>Hi, I'm Gage</h1>
-        <button id="continueButton">Continue?</button>
+      <canvas id="infoDisplay"></canvas>
+      <canvas id="canvas" class="bgGoo"></canvas>
+      <div class="glassOverlay"></div>
+      <div class="contentContainer">
+        <h1 class="content">My Works</h1>
+        <button id="continueButton">Let's Chat!</button>
       </div>
-
-
     </div>
-
-    <svg xmlns="http://www.w3.org/2000/svg">
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
       <defs>
         <filter id="blur-contrast-composite">
           <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur" />

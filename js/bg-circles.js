@@ -6,6 +6,15 @@ let elapsedTime = 0;
 // canvas variables
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext('2d');
+
+let info = document.getElementById("infoDisplay");
+let infoCtx = info.getContext('2d');
+info.width = window.innerWidth;
+info.height = 50;
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight / 2;
+
 let cw = canvas.width;
 let ch = canvas.height;
 
@@ -17,10 +26,15 @@ let accumulatedFrames = 0;
 // blocks (numCircles * 2 * size must be less than 600 for this example)
 let numCircles = 30;
 let circles = [];
-let velocity = 1;
-let size = 125;
+let velocity = 2;
+let size = 144;
 
 function main(timestamp) {
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight / 2;
+    cw = canvas.width;
+    ch = canvas.height;
 
     // accumulating time and frames for FPS
     accumulatedTime += timestamp - lastTime;
@@ -56,57 +70,60 @@ function update() {
         circle.x += circle.vx;
         circle.y += circle.vy;
         // horizontal boundary
-        if (circle.x <= size || circle.x >= cw - size) {
+        if (circle.x <= circle.size || circle.x >= cw - circle.size) {
             circle.vx *= -1;
-            circle.x = circle.x <= size ? size : cw - size;
+            circle.x = circle.x <= circle.size ? circle.size : cw - circle.size;
         }
         // vertical boundary
-        if (circle.y <= size || circle.y >= ch - size) {
+        if (circle.y <= circle.size || circle.y >= ch - circle.size) {
             circle.vy *= -1;
-            circle.y = circle.y <= size ? size : ch - size;
+            circle.y = circle.y <= circle.size ? circle.size : ch - circle.size;
         }
     }
 }
 
 function render() {
     ctx.clearRect(0, 0, cw, ch);
+    infoCtx.clearRect(0, 0, cw, ch);
+
     // circles
     for (let i = 0; i < circles.length; i++) {
         // Set the fill style and draw a rectangle
         ctx.fillStyle = circles[i].gradient;
         ctx.beginPath();
-        ctx.arc(circles[i].x, circles[i].y, circles[i].size, 0, 2 * Math.PI, false);
+        const radius = circles[i].size;
+
+        ctx.arc(circles[i].x, circles[i].y, radius, 0, 2 * Math.PI, false);
         ctx.fill();
     }
 
     // fps
-    ctx.fillStyle = 'white';
-    ctx.font = "10px Arial";
-    ctx.fillText("FPS: " + fps, 5, 12);
+    infoCtx.fillStyle = 'white';
+    infoCtx.font = "16px Arial";
+    infoCtx.fillText("FPS: " + fps, 0, 50);
 }
+
 
 // create the circles
 for (let i = 0; i < numCircles; i++) {
     let randSize = Math.random() * size;
+    console.log("size: " + randSize);
+
 
     // Create a radial gradient
-    // The inner circle is at x=110, y=90, with radius=30
-    // The outer circle is at x=100, y=100, with radius=70
-    const gradient = ctx.createRadialGradient((cw/2), 0, 0, (cw/2), 0, 1000);
+    const gradient = ctx.createRadialGradient((cw/2), 0, 0, (cw/2), 0, ch * 1.25);
     //const gradient = ctx.createRadialGradient(circles[i].x, circles[i].y, 0, circles[i].x, circles[i].y, circles[i].size);
 
     // Add three color stops
     gradient.addColorStop(0, "hsla(9, 84%, 55%, 1)");
     gradient.addColorStop(0.5, "hsla(330, 66%, 41%, 1)");
-    gradient.addColorStop(1, "hsla(228, 33%, 16%, 1)");
+    gradient.addColorStop(1, "hsl(271,94%,20%)");
 
     circles.push({
         size: randSize,
         gradient: gradient,
         x: (Math.random() - 0.5)* cw/2 + cw/2,
         y: (Math.random() - 0.5)* ch/2 + ch/2,
-        //x: 2 * randSize * i,
-        //y: Math.random() * (ch - 2 * randSize) + randSize,
         vx: (Math.random() - 0.5) * velocity * 1,
         vy: (Math.random() - 0.5) * velocity * 0.25
     });
