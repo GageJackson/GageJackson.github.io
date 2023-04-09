@@ -1,31 +1,37 @@
-const gooButton = document.querySelector(".gooButton");
-const gooParticles = document.getElementsByClassName("goo");
 
-gooButton.addEventListener("pointerenter", (event) => {
-    for (let i = 0; i < gooParticles.length; i++) {
-        let randomNum1 = (Math.floor((Math.random() * 20) + 50));
-        let randomNum2 = (Math.floor((Math.random() * 20) + 50));
-        let randomAngle = Math.random() * Math.PI * 2;
-        let x = Math.cos(randomAngle) * randomNum1;
-        let y = Math.sin(randomAngle) * randomNum2;
-        gooParticles[i].style.left = `calc(50% + ${x}px)`;
-        gooParticles[i].style.top = `calc(50% + ${y}px)`;
-        gooParticles[i].classList.add("goo-active");
+var magnets = document.querySelectorAll('.magnetic')
+var strength = 50;
 
-    }
+magnets.forEach( (magnet) => {
+    magnet.addEventListener('mousemove', moveMagnet );
+    magnet.addEventListener('mouseout', function(event) {
+        TweenMax.to( event.currentTarget, 1, {x: 0, y: 0, ease: Power4.easeOut})
+    } );
 });
 
+function moveMagnet(event) {
+    var magnetButton = event.currentTarget
+    var bounding = magnetButton.getBoundingClientRect()
 
-gooButton.addEventListener("pointerleave", (event) =>{
-    for (let i = 0; i < gooParticles.length; i ++){
-        gooParticles[i].style.removeProperty("top");
-        gooParticles[i].style.removeProperty("right");
-        gooParticles[i].style.removeProperty("bottom");
-        gooParticles[i].style.removeProperty("left");
-        gooParticles[i].classList.remove("goo-active");
+    //console.log(magnetButton, bounding)
 
-    }
-    });
+    TweenMax.to( magnetButton, 1, {
+        x: ((( event.clientX - bounding.left)/magnetButton.offsetWidth) - 0.5) * strength,
+        y: ((( event.clientY - bounding.top)/magnetButton.offsetHeight) - 0.5) * strength,
+        ease: Power4.easeOut
+    })
 
-console.log(gooParticles);
-//console.log(gooParticles);
+    //magnetButton.style.transform = 'translate(' + (((( event.clientX - bounding.left)/(magnetButton.offsetWidth))) - 0.5) * strength + 'px,'+ (((( event.clientY - bounding.top)/(magnetButton.offsetHeight))) - 0.5) * strength + 'px)';
+}
+
+const container = document.querySelector('.container');
+const circle = document.querySelector('.circle');
+
+container.addEventListener('mousemove', e => {
+    const rect = container.getBoundingClientRect();
+    const x = e.clientX - 100;
+    const y = e.clientY - rect.top * 2.9;
+
+    circle.style.left = `${x}px`;
+    circle.style.top = `${y}px`;
+});

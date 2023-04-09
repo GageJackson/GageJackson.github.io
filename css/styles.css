@@ -76,6 +76,7 @@
     font: inherit;
 }
 * {
+    /*border: greenyellow 1px solid;*/
 }
 /* general */
 .flex {
@@ -195,8 +196,10 @@ h1 {
     border-radius: 50%;
     position: relative;
     z-index: 1;
-    display: block;
-    padding: 12px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
     border: none;
     font-size: 18px;
     font-weight: bold;
@@ -209,8 +212,18 @@ h1 {
 }
 .gooContainer {
     position: relative;
-    display: inline-block;
 }
+
+.circle {
+    position: absolute;
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--color-tertiary-dark);
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* This is important to prevent the circle from blocking mouse events */
+}
+
 .goo {
     background-color: var(--color-tertiary-dark);
     height: 50px;
@@ -225,8 +238,8 @@ h1 {
 
 .goo-active {
     animation-name: goo-particle;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-outout;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-play-state: running;
 }
@@ -238,12 +251,61 @@ h1 {
     }
     to {
         opacity: 0;
-        transform: scale(2) translate(-50%,-50%);
+        transform: scale(1) ;
     }
 }
 
+@keyframes moveBall {
+    from {
+        transform: translate(0, 0);
+        scale: 1;
+    }
+    to {
+        transform: translate(var(--x), var(--y));
+        scale: 0;
+    }
+}
 
-@media (max-width: 40rem){
+.ball {
+    width: 100px;
+    aspect-ratio: 1;
+    background-color: var(--color-tertiary-dark);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 0;
+    animation: moveBall 1s ease-in forwards;
+}
+
+.button-text {
+    z-index: 1000;
+}
+
+.circular-button {
+    position: relative;
+    width: 150px;
+aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--color-tertiary-dark);
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.magnetic {
+    margin: -20px;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid #000; //use this for debugging
+}
+
+
+@media (max-width: 50rem){
     .primary-nav{
         position: fixed;
         z-index: 1000;
@@ -312,6 +374,7 @@ button {
 
 .container {
     display: grid;
+    position: relative;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
 }
@@ -335,6 +398,8 @@ button {
 
 .gooey {
     filter: url('#blur-contrast-composite');
+    height: 100%;
+    width: 100%;
 }
 
 .glassOverlay {

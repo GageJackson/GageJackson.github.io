@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/test.css" />
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body class="dark-mode" data-darkMode="true">
 <main>
@@ -52,14 +52,15 @@
         </nav>
     </header>
     <section>
-        <div class="container">
+        <div class="container magnetic">
             <canvas id="infoDisplay"></canvas>
-            <canvas id="canvas" class="bgGoo"></canvas>
+<!--            <canvas id="canvas" class="bgGoo gooey"></canvas>-->
             <div class="glassOverlay"></div>
-            <div class="contentContainer">
-                <h1 class="content">Hi, I'm Gage</h1>
-                <p class="content">I design unique web & graphic experiences</p>
-                <button id="continueButton">Let's Chat!</button>
+            <div class="contentContainer gooey magnetic">
+                <!--                <h1>Hi, I'm Gage</h1>-->
+                <!--                <p class="tagline">I design unique web & graphic experiences</p>-->
+                <button id="continueButton" class=" circular-button"><span class="button-text"> Let's Chat!</span></button>
+                <div class="circle"></div>
             </div>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
@@ -81,6 +82,7 @@
 <!-- Nav JS -->
 <script src="js/nav.js"></script>
 <!-- BG JS -->
-<script src="js/bg-circles.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
 </body>
 </html>
