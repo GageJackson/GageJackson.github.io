@@ -188,124 +188,11 @@ h1 {
     color: var(--color-tertiary-dark);
 }
 
-.gooButton {
-    margin: 1rem auto;
-    aspect-ratio: 1;
-    color: var(--color-primary-dark);
-    background-color: var(--color-tertiary-dark);
-    border-radius: 50%;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10rem;
-    border: none;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-.gooButton:hover {
-    color: var(--color-accent-light);
-    transform: scale(1.1);
-}
 .gooContainer {
     position: relative;
 }
 
-.circle {
-    position: absolute;
-    width: 50px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background-color: var(--color-tertiary-dark);
-    transform: translate(-50%, -50%);
-    pointer-events: none; /* This is important to prevent the circle from blocking mouse events */
-}
-
-.goo {
-    background-color: var(--color-tertiary-dark);
-    height: 50px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-
-}
-
-.goo-active {
-    animation-name: goo-particle;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    animation-play-state: running;
-}
-
-@keyframes goo-particle {
-    from {
-        opacity: 1;
-        transform: scale(1);
-    }
-    to {
-        opacity: 0;
-        transform: scale(1) ;
-    }
-}
-
-@keyframes moveBall {
-    from {
-        transform: translate(0, 0);
-        scale: 1;
-    }
-    to {
-        transform: translate(var(--x), var(--y));
-        scale: 0;
-    }
-}
-
-.ball {
-    width: 100px;
-    aspect-ratio: 1;
-    background-color: var(--color-tertiary-dark);
-    border-radius: 50%;
-    position: absolute;
-    z-index: 0;
-    animation: moveBall 1s ease-in forwards;
-}
-
-.button-text {
-    z-index: 1000;
-}
-
-.circular-button {
-    position: relative;
-    width: 150px;
-aspect-ratio: 1;
-    border-radius: 50%;
-    background-color: var(--color-tertiary-dark);
-    color: #fff;
-    font-size: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
-.magnetic {
-    margin: -20px;
-    padding: 20px;
-    display: inline-block;
-    border-radius: 50%;
-    border: 1px solid #000; //use this for debugging
-}
-
-
-@media (max-width: 50rem){
+@media (max-width: 60rem){
     .primary-nav{
         position: fixed;
         z-index: 1000;
@@ -353,14 +240,6 @@ aspect-ratio: 1;
 @media (min-width: 50rem){
     .primary-nav {
 
-    }
-}
-
-@media (max-width: 28rem){
-    #logo {
-        font-size: clamp(2rem, 10vw, 5rem);
-        top: .25rem;
-        left: .25rem;
     }
 }
 
