@@ -44,7 +44,7 @@
     --fs-200: 0.875rem;
 
     --ff-logo: var(--ff-primary);
-    --fs-logo: 3rem;
+    --fs-logo: 2rem;
     --fw-logo: var(--fw-black);
 
     --fs-tagline: var(--fs-400);
@@ -101,20 +101,37 @@ html {
 }
 
 body[data-darkMode="true"] {
-    background-color: #172233;
+    background-color: var(--color-primary-dark);
 }
 
 body {
     background-color: var(--color-neutral-1);
     font-family: var(--ff-body);
     font-size: var(--fs-body);
-    color: var(--color-neutral-5);
+    color: var(--color-primary-dark);
 }
 
 h1 {
-    font-size: var(--fs-800);
+    font-size: clamp(var(--fs-600),var(--fs-700),var(--fs-800));
     font-weight: var(--fw-bold);
     text-align: center;
+}
+
+h2 {
+    font-size: clamp(var(--fs-400),var(--fs-500),var(--fs-600));
+    font-weight: var(--fw-bold);
+    text-align: center;
+}
+
+h3 {
+    font-size: clamp(var(--fs-300),var(--fs-400),var(--fs-500));
+    font-weight: var(--fw-bold);
+    text-align: start;
+    margin-block: 1rem;
+}
+
+p{
+    text-align: start;
 }
 
 *[data-darkMode="true"] {
@@ -138,15 +155,15 @@ h1 {
 
 /* primary header */
 #logo {
-
-    padding-left: 1rem;
-
     font-family: var(--ff-logo);
     font-size: var(--fs-logo);
-    font-weight: var(--fw-logo);
     font-style: italic;
 
     user-select: none;
+}
+
+#logoContainer {
+    padding: 1rem 0 0 3rem;
 }
 
 .primary-header {
@@ -209,8 +226,8 @@ h1 {
 
     .mobile-nav-toggle {
         position: absolute;
-        top: 1.25rem;
-        right: 1.25rem;
+        top: 1.5rem;
+        right: 3rem;
 
         z-index: 9999;
         display: block;
@@ -265,9 +282,12 @@ button {
 }
 
 .bgGoo {
-    grid-row: 1 / -1;
-    grid-column: 1 / -1;
-    z-index: -1;
+    /*grid-row: 1 / -1;*/
+    /*grid-column: 1 / -1;*/
+    /*z-index: -1;*/
+    position: fixed;
+    height: 85vh;
+    width: 100vw;
 }
 
 .topBar {
@@ -278,18 +298,39 @@ button {
     padding: 1rem;
 }
 
-.bottomBar {
-    height: 100%;
-    border-radius: 0 0 1rem 1rem;
-    background: hsla(0 0% 50% / 0.15);
-    border: var(--color-neutral-3) solid 1px;
-    backdrop-filter: blur(5rem);
-}
-
 .midBar {
     height: 20rem;
     display: flex;
     padding: 1rem;
+}
+
+.bottomBar {
+    border-radius: 0 0 1rem 1rem;
+    background: hsla(0 0% 50% / 0.15);
+    border: var(--color-neutral-3) solid 1px;
+    backdrop-filter: blur(5rem);
+    display: grid;
+    gap: 3rem;
+    padding: 2rem;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(auto-fill,1fr);
+    grid-auto-flow: dense;
+}
+
+.projectCards {
+    gap: 1rem;
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+#latestWorks {
+    grid-column: span 12;
+}
+
+.imageBlock {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: var(--color-primary);
 }
 
 .gooey {
@@ -318,4 +359,9 @@ button {
     font-size: var(--fs-600);
     align-self: center;
     margin: 0 auto;
+}
+
+canvas {
+    height: 100vh;
+    width: 100vw;
 }

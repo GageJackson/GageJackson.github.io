@@ -3,39 +3,48 @@ let updateRate = 1000 / 60;
 let lastTime = 0;
 let elapsedTime = 0;
 
+
+
+// let info = document.getElementById("infoDisplay");
+// let infoCtx = info.getContext('2d');
+// info.width = window.innerWidth;
+// info.height = 50;
+
 // canvas variables
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext('2d');
 
-let info = document.getElementById("infoDisplay");
-let infoCtx = info.getContext('2d');
-info.width = window.innerWidth;
-info.height = 50;
+// const parent = canvas.parentNode;
+// const width = parent.offsetWidth;
+// const height = width * 9 / 16;
+// canvas.width = width;
+// canvas.height = height;
 
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight / 2;
+canvas.height = window.innerHeight;
 
 let cw = canvas.width;
 let ch = canvas.height;
+console.log(cw);
+console.log(ch);
 
 // fps
 let fps = 0;
 let accumulatedTime = 0;
 let accumulatedFrames = 0;
 
-// blocks (numCircles * 2 * size must be less than 600 for this example)
 let numCircles = 30;
 let circles = [];
 let velocity = 1;
 let size = 200 * cw / 1000;
-console.log(size);
+// console.log(size);
 
 function main(timestamp) {
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight / 2;
-    cw = canvas.width;
-    ch = canvas.height;
+    // canvas.width = window.innerWidth;
+    // canvas.height = window.innerHeight;
+    // cw = canvas.width;
+    // ch = canvas.height;
 
     // accumulating time and frames for FPS
     accumulatedTime += timestamp - lastTime;
@@ -86,7 +95,7 @@ function update() {
 
 function render() {
     ctx.clearRect(0, 0, cw, ch);
-    infoCtx.clearRect(0, 0, cw, ch);
+    // infoCtx.clearRect(0, 0, cw, ch);
 
     // circles
     for (let i = 0; i < circles.length; i++) {
@@ -95,14 +104,14 @@ function render() {
         ctx.beginPath();
         const radius = circles[i].size;
 
-        ctx.arc(circles[i].x, circles[i].y, radius, 0, 2 * Math.PI, false);
+        ctx.arc(circles[i].x, circles[i].y, radius, 0, 2 * Math.PI);
         ctx.fill();
     }
 
     // fps
-    infoCtx.fillStyle = 'white';
-    infoCtx.font = "16px Arial";
-    infoCtx.fillText("FPS: " + fps, 0, 50);
+    // infoCtx.fillStyle = 'white';
+    // infoCtx.font = "16px Arial";
+    // infoCtx.fillText("FPS: " + fps, 0, 50);
 }
 
 
@@ -125,7 +134,7 @@ for (let i = 0; i < numCircles; i++) {
         x: (Math.random() - 0.5)* cw/2 + cw/2,
         y: (Math.random() - 0.5)* ch/2 + ch/2,
         vx: (Math.random() - 0.5) * velocity * 1,
-        vy: (Math.random() - 0.5) * velocity * 0.25
+        vy: (Math.random() - 0.5) * velocity * 1
     });
 }
 
