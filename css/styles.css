@@ -34,9 +34,9 @@
     --fw-black: 900;
 
     /* font-sizes */
-    --fs-900: 9.375rem;
-    --fs-800: 6.25rem;
-    --fs-700: 3.5rem;
+    --fs-900: 8rem;
+    --fs-800: 6rem;
+    --fs-700: 4rem;
     --fs-600: 2rem;
     --fs-500: 1.75rem;
     --fs-400: 1.125rem;
@@ -188,10 +188,6 @@ h1 {
     color: var(--color-tertiary-dark);
 }
 
-.gooContainer {
-    position: relative;
-}
-
 @media (max-width: 60rem){
     .primary-nav{
         position: fixed;
@@ -264,9 +260,8 @@ button {
     z-index: 1;
     place-self: center;
     text-align: center;
-    padding: 1rem 2rem;
-    margin-inline: 3rem;
-
+    width: calc(100% - 6rem);
+    height: 100%;
 }
 
 .bgGoo {
@@ -275,10 +270,32 @@ button {
     z-index: -1;
 }
 
+.topBar {
+    border-radius: 1rem 1rem 0 0;
+    background: hsla(0 0% 50% / 0.15);
+    border: var(--color-neutral-3) solid 1px;
+    backdrop-filter: blur(5rem);
+    padding: 1rem;
+}
+
+.bottomBar {
+    height: 100%;
+    border-radius: 0 0 1rem 1rem;
+    background: hsla(0 0% 50% / 0.15);
+    border: var(--color-neutral-3) solid 1px;
+    backdrop-filter: blur(5rem);
+}
+
+.midBar {
+    height: 20rem;
+    display: flex;
+    padding: 1rem;
+}
+
 .gooey {
     filter: url('#blur-contrast-composite');
-    height: 100%;
-    width: 100%;
+    height: 1fr;
+    width: 1fr;
 }
 
 .glassOverlay {
@@ -288,8 +305,8 @@ button {
     margin-inline: 3rem;
     background: hsla(0 0% 50% / 0.15);
     border: var(--color-neutral-3) solid 1px;
-    border-radius: 20px;
-    backdrop-filter: blur(.25rem);
+    border-radius: 1rem;
+    backdrop-filter: blur(.5rem);
 
 }
 
@@ -297,12 +314,8 @@ button {
     z-index: 2;
 }
 
-.content {
-}
-
-section {
-}
-
 .tagline {
     font-size: var(--fs-600);
+    align-self: center;
+    margin: 0 auto;
 }

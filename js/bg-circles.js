@@ -26,8 +26,9 @@ let accumulatedFrames = 0;
 // blocks (numCircles * 2 * size must be less than 600 for this example)
 let numCircles = 30;
 let circles = [];
-let velocity = 2;
-let size = 144;
+let velocity = 1;
+let size = 200 * cw / 1000;
+console.log(size);
 
 function main(timestamp) {
 
@@ -69,6 +70,7 @@ function update() {
         let circle = circles[i];
         circle.x += circle.vx;
         circle.y += circle.vy;
+
         // horizontal boundary
         if (circle.x <= circle.size || circle.x >= cw - circle.size) {
             circle.vx *= -1;
@@ -115,7 +117,7 @@ for (let i = 0; i < numCircles; i++) {
     // Add three color stops
     gradient.addColorStop(0, "hsla(9, 84%, 55%, 1)");
     gradient.addColorStop(0.5, "hsla(330, 66%, 41%, 1)");
-    gradient.addColorStop(1, "hsl(271,94%,20%)");
+    gradient.addColorStop(1, "hsla(271,94%,20%, 1)");
 
     circles.push({
         size: randSize,
