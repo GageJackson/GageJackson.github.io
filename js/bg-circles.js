@@ -107,11 +107,6 @@ function render() {
         ctx.arc(circles[i].x, circles[i].y, radius, 0, 2 * Math.PI);
         ctx.fill();
     }
-
-    // fps
-    // infoCtx.fillStyle = 'white';
-    // infoCtx.font = "16px Arial";
-    // infoCtx.fillText("FPS: " + fps, 0, 50);
 }
 
 
