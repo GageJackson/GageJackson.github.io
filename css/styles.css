@@ -130,7 +130,7 @@ h3 {
     margin-block: 1rem;
 }
 
-p{
+p {
     text-align: start;
 }
 
@@ -291,24 +291,25 @@ button {
 }
 
 .topBar {
-    border-radius: 1rem 1rem 0 0;
-    background: hsla(0 0% 50% / 0.15);
-    border: var(--color-neutral-3) solid 1px;
-    backdrop-filter: blur(5rem);
-    padding: 1rem;
+    /*border-radius: 1rem 1rem 0 0;*/
+    /*background: hsla(0 0% 50% / 0.15);*/
+    /*border: var(--color-neutral-3) solid 1px;*/
+    /*backdrop-filter: blur(5rem);*/
+
 }
 
 .midBar {
-    height: 20rem;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 1rem;
 }
 
+.midBar  p {
+    text-align: center;
+}
+
 .bottomBar {
-    border-radius: 0 0 1rem 1rem;
-    background: hsla(0 0% 50% / 0.15);
-    border: var(--color-neutral-3) solid 1px;
-    backdrop-filter: blur(5rem);
     display: grid;
     gap: 3rem;
     padding: 2rem;
@@ -321,6 +322,35 @@ button {
     gap: 1rem;
     grid-column: span 4;
     grid-row: span 2;
+
+    border-radius: 1rem;
+    background: hsla(0 0% 50% / 0.15);
+    border: var(--color-neutral-3) solid 1px;
+
+    box-shadow: 0 .5rem 2rem 0 hsla(230 33% 7%/ 0.35);
+    backdrop-filter: blur(4rem);
+    -webkit-backdrop-filter: blur(4rem);
+
+    overflow: hidden;
+    transition: all ease-in 200ms;
+}
+
+.projectCards:hover {
+    scale: 105%;
+}
+
+.project_card_head {
+
+}
+
+.project_card_body {
+    padding-block: 2rem;
+    padding-inline: 1rem;
+}
+
+.project_card_foot {
+    padding-block: 2rem;
+    padding-inline: 1rem;
 }
 
 #latestWorks {
@@ -331,6 +361,13 @@ button {
     width: 100%;
     aspect-ratio: 1;
     background-color: var(--color-primary);
+    opacity: 65%;
+    mix-blend-mode: hard-light;
+}
+
+.imageBlock:hover {
+    opacity: 90%;
+    mix-blend-mode: hard-light;
 }
 
 .gooey {
@@ -340,14 +377,14 @@ button {
 }
 
 .glassOverlay {
-    grid-row: 1 / -1;
-    grid-column: 1 / -1;
-    z-index: 0;
-    margin-inline: 3rem;
-    background: hsla(0 0% 50% / 0.15);
-    border: var(--color-neutral-3) solid 1px;
-    border-radius: 1rem;
-    backdrop-filter: blur(.5rem);
+    /*grid-row: 1 / -1;*/
+    /*grid-column: 1 / -1;*/
+    /*z-index: 0;*/
+    /*margin-inline: 3rem;*/
+    /*background: hsla(0 0% 50% / 0.15);*/
+    /*border: var(--color-neutral-3) solid 1px;*/
+    /*border-radius: 1rem;*/
+    /*backdrop-filter: blur(.5rem);*/
 
 }
 
