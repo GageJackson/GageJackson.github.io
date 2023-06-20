@@ -12,9 +12,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/index.css" />
 </head>
 <body class="dark-mode" data-darkMode="true">
-<main>
+
     <!-- header section -->
     <header class="primary-header flex">
         <div id="logoContainer">
@@ -39,8 +40,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="about-me.html">
-                        About Me
+                    <a href="resume.html">
+                        Resume
                     </a>
                 </li>
                 <li>
@@ -51,62 +52,102 @@
             </ul>
         </nav>
     </header>
-    <section>
-        <div class="container">
-<!--            <canvas id="infoDisplay"></canvas>-->
-            <canvas id="canvas" class="bgGoo gooey"></canvas>
-            <div class="glassOverlay"></div>
-            <div class="contentContainer">
-                <div class="topBar">
+    <main class="container">
+        <canvas id="canvas" class="bgGoo gooey"></canvas>
+        <div class="contentContainer">
+            <section class="welcome">
+                <h1>Hi, I'm Gage</h1>
+                <p class="tagline">I design unique web & graphic experiences</p>
+            </section>
+            <section class="latest-works">
+                <h2 class="section-title">Latest works</h2>
+                <article class="projectCards glass">
+                    <div class="project_card_head">
+                        <img class="imageBlock" src="assets/imgs/site_placeholder.webp">
+                    </div>
+                    <div class="project_card_body">
+                        <h3>Project Name 01</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam asperiores culpa error exercitationem molestias nihil odio similique tempore voluptates?</p>
+                    </div>
+                    <div class="project_card_foot">
 
-                </div>
-                <div class="midBar">
-                    <h1>Hi, I'm Gage</h1>
-                    <p class="tagline">I design unique web & graphic experiences</p>
-                </div>
-                <section class="bottomBar">
-                    <h2 id="latestWorks">Latest Works</h2>
-                    <article class="projectCards">
-                        <div class="project_card_head">
-                            <img class="imageBlock" src="assets/imgs/site_placeholder.webp">
-                        </div>
-                        <div class="project_card_body">
-                            <h3>Project Name 01</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam asperiores culpa error exercitationem molestias nihil odio similique tempore voluptates?</p>
-                        </div>
-                        <div class="project_card_foot">
+                    </div>
+                </article>
 
-                        </div>
-                    </article>
+                <article class="projectCards glass">
+                    <div class="project_card_head">
+                        <img class="imageBlock" src="assets/imgs/site_placeholder.webp">
+                    </div>
+                    <div class="project_card_body">
+                        <h3>Project Name 01</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam asperiores culpa error exercitationem molestias nihil odio similique tempore voluptates?</p>
+                    </div>
+                    <div class="project_card_foot">
 
-                    <article class="projectCards">
-                        <div class="project_card_head">
-                            <img class="imageBlock" src="assets/imgs/site_placeholder.webp">
-                        </div>
-                        <div class="project_card_body">
-                            <h3>Project Name 01</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam asperiores culpa error exercitationem molestias nihil odio similique tempore voluptates?</p>
-                        </div>
-                        <div class="project_card_foot">
+                    </div>
+                </article>
 
-                        </div>
-                    </article>
+                <article class="projectCards glass">
+                    <div class="project_card_head">
+                        <img class="imageBlock" src="assets/imgs/site_placeholder.webp">
+                    </div>
+                    <div class="project_card_body">
+                        <h3>Project Name 01</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam asperiores culpa error exercitationem molestias nihil odio similique tempore voluptates?</p>
+                    </div>
+                    <div class="project_card_foot">
 
-                    <article class="projectCards">
-                        <div class="project_card_head">
-                            <img class="imageBlock" src="assets/imgs/site_placeholder.webp">
-                        </div>
-                        <div class="project_card_body">
-                            <h3>Project Name 01</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam asperiores culpa error exercitationem molestias nihil odio similique tempore voluptates?</p>
-                        </div>
-                        <div class="project_card_foot">
+                    </div>
+                </article>
+            </section>
+            <section class="about-me">
+                <h2 class="section-title">About me</h2>
+                <article class="about-me-card glass">
+                    <p>I am an experienced software developer proficient in programming and graphic design. With a combination of analytical thinking and creativity, I have successfully delivered projects that showcase my skills. I thrive in the problem-solving nature of the field and find great enjoyment in it.</p>
+                    <p>Collaboration is key to achieving outstanding outcomes, and I excel at working with highly capable teams. I foster a collaborative and dynamic work environment that encourages the best ideas to flourish. Continuously enhancing my skills through proactive learning and staying up-to-date with emerging technologies is a priority for me.</p>
+                    <p>My attention to design aesthetics and user experience ensures visually appealing and intuitive interfaces. I am passionate about leveraging cutting-edge tools and driving innovation. With a commitment to surpassing client expectations, I consistently deliver efficient, scalable, and robust solutions.</p>
+                </article>
+            </section>
 
-                        </div>
-                    </article>
-
-                </section>
-            </div>
+            <section class="my-strengths">
+                <h2 class="section-title">My Strengths</h2>
+                <article class="strength-card glass">
+                    <p>Java</p>
+                </article>
+                <article class="strength-card glass">
+                    <p>Javascript</p>
+                </article>
+                <article class="strength-card glass">
+                    <p>HTML</p>
+                </article>
+                <article class="strength-card glass">
+                    <p>CSS</p>
+                </article>
+                <article class="strength-card glass">
+                    <p>MySQL</p>
+                </article>
+                <article class="strength-card glass">
+                    <p>Spring Boot</p>
+                </article>
+                <article class="strength-card glass">
+                    <p>Thymeleaf</p>
+                </article>
+                <article class="strength-card glass">
+                    <p>Git</p>
+                </article>
+                <article class="strength-card glass">
+                    <p>Illustrator</p>
+                </article>
+                <article class="strength-card glass">
+                    <p>Java</p>
+                </article>
+                <article class="strength-card glass">
+                    <p>jQuery</p>
+                </article>
+                <article class="strength-card glass">
+                    <p>Bootstrap</p>
+                </article>
+            </section>
 
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
@@ -118,9 +159,8 @@
                 </filter>
             </defs>
         </svg>
-    </section>
+    </main>
 
-</main>
 <!-- jQuery -->
 <script src="js/jquery-3.6.3.js"></script>
 <!-- My JS -->
