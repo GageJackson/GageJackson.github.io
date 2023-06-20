@@ -1,0 +1,126 @@
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin-block: 20rem;
+}
+
+.welcome  p {
+    text-align: center;
+}
+
+.latest-works {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(auto-fill,1fr);
+    grid-auto-flow: dense;
+    margin-block-end: 5rem;
+}
+
+.projectCards {
+    gap: 1rem;
+    grid-column: span 4;
+    grid-row: span 2;
+
+    border-radius: 1rem;
+
+    overflow: hidden;
+    transition: all ease-in 200ms;
+}
+
+.projectCards:hover {
+    scale: 105%;
+}
+
+.project_card_head {
+    padding: 0;
+}
+
+.project_card_body {
+    padding-block: 2rem;
+    padding-inline: 1rem;
+}
+
+.project_card_foot {
+    padding-block: 2rem;
+    padding-inline: 1rem;
+}
+
+.about-me {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(auto-fill,1fr);
+    grid-auto-flow: dense;
+    margin-block-end: 5rem;
+}
+
+.about-me-card {
+    gap: 1rem;
+    grid-column: span 12;
+    grid-row: span 1;
+
+    border-radius: 1rem;
+
+    padding: 2rem;
+}
+
+.about-me-card p {
+    margin-block-end: 2rem;
+    line-height: 1.6rem;
+}
+
+
+
+.section-title {
+    grid-column: span 12;
+}
+
+
+
+.imageBlock {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: var(--color-primary);
+    opacity: 65%;
+    mix-blend-mode: hard-light;
+}
+
+.imageBlock:hover {
+    opacity: 90%;
+    mix-blend-mode: hard-light;
+}
+
+.my-strengths {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(auto-fill,1fr);
+    grid-auto-flow: dense;
+    margin-block-end: 5rem;
+}
+
+.strength-card {
+    gap: 1rem;
+    grid-column: span 2;
+    grid-row: span 2;
+
+    width: 100%;
+    aspect-ratio: 1;
+
+    border-radius: 1rem;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.strength-card p {
+    text-align: center;
+}
