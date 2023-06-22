@@ -40,7 +40,7 @@
 }
 
 .project_card_body {
-    padding-block: 2rem;
+    padding-block: 1rem;
     padding-inline: 1rem;
 }
 
@@ -95,7 +95,7 @@
     mix-blend-mode: hard-light;
 }
 
-.my-strengths {
+.resume-skills {
     display: grid;
     gap: 1rem;
     padding: 2rem;
@@ -123,4 +123,55 @@
 
 .strength-card p {
     text-align: center;
+}
+
+/*///////////////////////////////////////////////////////
+Index Grid Layout Mobile
+///////////////////////////////////////////////////////*/
+@media screen and (min-width: 900px) and (max-width: 1200px){
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 899px){
+    .welcome {
+        margin-block: 10rem;
+    }
+
+    .projectCards {
+        gap: 1rem;
+        grid-column: span 6;
+        grid-row: span 2;
+    }
+
+    .strength-card {
+        gap: 1rem;
+        grid-column: span 3;
+        grid-row: span 3;
+    }
+}
+
+@media screen and (max-width: 599px){
+    .welcome {
+        margin-block: 5rem;
+    }
+
+    .projectCards {
+        gap: 1rem;
+        grid-column: span 12;
+        grid-row: span 2;
+    }
+
+    .strength-card {
+        gap: 1rem;
+        grid-column: span 4;
+        grid-row: span 4;
+    }
+}
+
+@media screen and (max-width: 399px){
+    .strength-card {
+        gap: 1rem;
+        grid-column: span 6;
+        grid-row: span 6;
+    }
 }
