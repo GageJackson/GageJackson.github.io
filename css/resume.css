@@ -9,8 +9,6 @@
     padding: 1rem;
 }
 
-
-
 .resume-link-card {
     display: flex;
     justify-content: center;
@@ -78,7 +76,12 @@ Resume Grid Layout Desktop
     margin-block-end: 3rem;
 }
 
-.strengths {
+.resume-links {
+    grid-column: 9 / span 4;
+    grid-row: 1 / span 1;
+}
+
+.links {
     display: grid;
     grid-template-columns: repeat(12,1fr);
     grid-template-rows: repeat(auto-fill,1fr);
@@ -87,74 +90,108 @@ Resume Grid Layout Desktop
     gap: 1rem;
 }
 
+.resume-experiences {
+    grid-column: 1 / span 8;
+    grid-row: 2 / span 32;
+}
+
+.experiences {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(auto-fill,1fr);
+    grid-auto-flow: dense;
+
+    gap: 1rem;
+}
+
+.resume-education {
+    grid-column: 9 / span 4;
+    grid-row: 19 / span 8;
+}
+
+.education {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(auto-fill,1fr);
+    grid-auto-flow: dense;
+
+    gap: 1rem;
+}
+
+.resume-skills {
+    grid-column: 9 / span 4;
+    grid-row: 2 / span 16;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(auto-fill,1fr);
+    grid-auto-flow: dense;
+
+    gap: 1rem;
+}
+
+/*///////////  Resume-Links  ///////////*/
+
 .email-card {
-    grid-column: 9 / span 1;
-    grid-row: 1/ span 1;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 3;
 }
 
 .github-card {
-    grid-column: 10 / span 1;
-    grid-row: 1/ span 1;
+    grid-column: 4 / span 3;
+    grid-row: 1 / span 3;
 }
 
 .linkedin-card {
-    grid-column: 11 / span 1;
-    grid-row: 1/ span 1;
+    grid-column: 7 / span 3;
+    grid-row: 1 / span 3;
 }
 
 .download-card {
-    grid-column: 12 / span 1;
-    grid-row: 1/ span 1;
+    grid-column: 10 / span 3;
+    grid-row: 1 / span 3;
 }
 
+/*///////////  Resume-Experiences  ///////////*/
+
 .experience-title {
-    grid-column: 1 / span 8;
-    grid-row: 3 / span 1;
+    grid-column: 1 / span 12;
+    grid-row: 1 / span 1;
 }
 
 .resume-experience-card-1 {
-    grid-column: 1 / span 8;
-    grid-row: 4 / span 4;
-    aspect-ratio: 2;
+    grid-column: 1 / span 12;
+    grid-row: 2 / span 6;
 }
 
 .resume-experience-card-2 {
-    grid-column: 1 / span 8;
-    grid-row: 8 / span 4;
-    aspect-ratio: 2;
+    grid-column: 1 / span 12;
+    grid-row: 8 / span 6;
 }
 
 .resume-experience-card-3 {
-    grid-column: 1 / span 8;
-    grid-row: 12 / span 4;
-    aspect-ratio: 2;
+    grid-column: 1 / span 12;
+    grid-row: 14 / span 6;
 }
 
 .resume-military-card {
-    grid-column: 1 / span 8;
-    grid-row: 16 / span 4;
-    aspect-ratio: 2;
+    grid-column: 1 / span 12;
+    grid-row: 20 / span 6;
 }
+
+/*///////////  Resume-Skills  ///////////*/
 
 .skills-title {
-    grid-column: 9 / span 4;
-    grid-row: 3 / span 1;
+    grid-column: 1 / span 12;
+    grid-row: 1 / span 1;
 }
 
-.my-strengths {
-    grid-column: 9 / span 4;
-    grid-row: 4 / span 5;
-}
-
-.education-title {
-    grid-column: 9 / span 4;
-    grid-row: 10 / span 1;
-}
-
-.resume-education-card {
-    grid-column: 9 / span 4;
-    grid-row: 11 / span 5;
-}
+/*.resume-skills {*/
+/*    grid-column: 1 / span 12;*/
+/*    grid-row: 2 / span 12;*/
+/*}*/
 
 .strength-card {
     grid-column: span 4;
@@ -167,111 +204,82 @@ Resume Grid Layout Desktop
     align-items: end;
 }
 
+/*///////////  Resume-Education  ///////////*/
+
+.education-title {
+    grid-column: 1 / span 12;
+    grid-row: 1 / span 1;
+}
+
+.resume-education-card {
+    grid-column: 1 / span 12;
+    grid-row: 2 / span 6;
+}
 
 
 /*///////////////////////////////////////////////////////
 Resume Grid Layout Mobile
 ///////////////////////////////////////////////////////*/
-@media screen and (max-width:900px) {
-    .resume-primary {
-        row-gap: 1rem;
-        column-gap: 1rem;
-        padding: 1rem;
-
-        margin-block-end: 3rem;
+@media screen and (min-width: 900px) and (max-width: 1200px){
+    .strength-card {
+        grid-column: span 6;
+        grid-row: span 6;
     }
 
-    .strengths {
-        gap: 1rem;
-    }
-
-    .email-card {
-        grid-column: 1 / span 3;
-        grid-row: 1/ span 3;
-    }
-
-    .github-card {
-        grid-column: 4 / span 3;
-        grid-row: 1/ span 3;
-    }
-
-    .linkedin-card {
-        grid-column: 7 / span 3;
-        grid-row: 1/ span 3;
-    }
-
-    .download-card {
-        grid-column: 10 / span 3;
-        grid-row: 1/ span 3;
-    }
-
-    .experience-title {
+    .resume-education {
         grid-column: 1 / span 8;
-        grid-row: 5 / span 1;
+        grid-row: 34 / span 8;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 899px){
+    .resume-links {
+        grid-column: 7 / span 6;
+        grid-row: 1 / span 1;
+    }
+}
+
+@media screen and (max-width: 599px){
+    .resume-links {
+        grid-column: 5 / span 8;
+        grid-row: 1 / span 1;
+    }
+}
+
+@media screen and (max-width: 899px){
+
+    .resume-primary {
+        display: grid;
+        row-gap: 1rem;
+        column-gap: 0;
+        padding: 2rem;
     }
 
-    .resume-experience-card-1 {
-        grid-column: 1 / span 12;
-        grid-row: 6 / span 4;
+    .links {
+        gap: .5rem;
     }
 
-    .resume-experience-card-2 {
+    .resume-experiences {
         grid-column: 1 / span 12;
-        grid-row: 10 / span 4;
+        grid-row: 2 / span 32;
     }
 
-    .resume-experience-card-3 {
+    .resume-education {
         grid-column: 1 / span 12;
-        grid-row: 14 / span 4;
+        grid-row: 50 / span 8;
     }
 
-    .resume-military-card {
+    .resume-skills {
         grid-column: 1 / span 12;
-        grid-row: 18 / span 4;
+        grid-row: 34 / span 16;
     }
 
-    .skills-title {
-        grid-column: 1 / span 12;
-        grid-row: 24 / span 1;
-    }
-
-    .my-strengths {
-        grid-column: 1 / span 12;
-        grid-row: 25 / span 4;
-    }
-
-    .education-title {
-        grid-column: 1 / span 12;
-        grid-row: 30 / span 1;
-    }
-
-    .resume-education-card {
-        grid-column: 1 / span 12;
-        grid-row: 31 / span 5;
+    .skills {
+        gap: .5rem;
     }
 
     .strength-card {
         grid-column: span 4;
         grid-row: span 4;
-
-        aspect-ratio: 1;
-
-        display: flex;
-        justify-content: center;
-        align-items: end;
-    }
-
-}
-
-@media screen and (min-width:900px) and (max-width: 1200px) {
-    .strength-card {
-        grid-column: span 6;
-        grid-row: span 6;
-
-        aspect-ratio: 1;
-
-        display: flex;
-        justify-content: center;
-        align-items: end;
     }
 }
