@@ -43,6 +43,7 @@
 .resume-title {
     text-align: start;
     grid-column: span 6;
+    margin-block-start: 2rem;
 }
 
 article li {
@@ -106,7 +107,7 @@ Resume Grid Layout Desktop
 
 .resume-education {
     grid-column: 9 / span 4;
-    grid-row: 19 / span 8;
+    grid-row: 18 / span 8;
 }
 
 .education {
