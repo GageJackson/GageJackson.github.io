@@ -11,68 +11,133 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/portfolio.css" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body class="dark-mode" data-darkMode="true">
-<main>
-  <!-- header section -->
-  <header class="primary-header flex">
-    <div>
-      <span id="logo">Gage Jackson</span>
-    </div>
 
-    <button id="btn-nav" class="mobile-nav-toggle btn"
-            aria-controls="primary-nav" aria-expanded="false">
-      <span class="sr-only" hidden="hidden">Menu</span>
-    </button>
+<!-- header section -->
+<header class="primary-header flex">
+  <div id="logoContainer">
+    <span id="logo">Gage Jackson</span>
+  </div>
 
-    <nav>
-      <ul id="primary-nav" class="primary-nav flex" data-visible="false">
-        <li>
-          <a href="index.html">
-            Home
-          </a>
-        </li>
-        <li class="active">
-          <a href="portfolio.html">
-            Portfolio
-          </a>
-        </li>
-        <li>
-          <a href="resume.html">
-            About Me
-          </a>
-        </li>
-        <li>
-          <button id="dark-mode-toggle" class="btn dark-mode" data-darkMode="true">
-            Dark Mode
-          </button>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <section>
-    <div class="container">
-      <canvas id="infoDisplay"></canvas>
-      <canvas id="canvas" class="bgGoo"></canvas>
-      <div class="glassOverlay"></div>
-      <div class="contentContainer">
-        <h1 class="content">My Works</h1>
-        <button id="continueButton">Let's Chat!</button>
+  <button id="btn-nav" class="mobile-nav-toggle btn"
+          aria-controls="primary-nav" aria-expanded="false">
+    <span class="sr-only" hidden="hidden">Menu</span>
+  </button>
+
+  <nav>
+    <ul id="primary-nav" class="primary-nav flex" data-visible="false">
+      <li class="active">
+        <a href="index.html">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="portfolio.html">
+          Portfolio
+        </a>
+      </li>
+      <li>
+        <a href="resume.html">
+          Resume
+        </a>
+      </li>
+      <li>
+        <button id="dark-mode-toggle" class="btn dark-mode" data-darkMode="true">
+          Dark Mode
+        </button>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main class="container">
+  <canvas id="canvas" class="bgGoo gooey"></canvas>
+  <div class="contentContainer">
+    <section class="portfolio-primary">
+      <div class="projects">
+
+
+        <article class="project">
+          <div class="project-img glass">
+            <a type="button" href="https://github.com/HoneyDoHelper/honey-do-helper"class="github-link glass">
+              <img src="assets/icons/github-sign.png" class="github-link-img">
+            </a>
+            <img src="assets/imgs/site_placeholder.webp" class="image">
+          </div>
+
+          <div class="project-description glass">
+            <h2 class="">Honeydo Helper</h2>
+
+            <p>
+              As a developer for the Honeydo Helper capstone project, I played a vital role in collaborating with a group of developers to design, plan, build, and deploy a mobile-responsive full-stack web application. In conjunction with my team, we successfully executed the project proposal by creating user stories, developing feature lists, wireframes, storyboards, database diagrams, and a project management board.
+            </p>
+
+            <p>
+              Taking on the responsibility of project lead, I facilitated the coordination and organization of our development efforts. I provided guidance and assistance to team members, ensuring that everyone stayed on track and maintained a unified vision for the application. Moreover, I actively participated in troubleshooting and debugging sessions, offering my expertise and support to resolve issues and optimize code efficiency.
+            </p>
+
+            <p>
+              Throughout the development lifecycle, I took charge of designing the overall structure of the application, ensuring that it adhered to best practices and industry standards. I leveraged my technical skills to implement robust logic, enabling seamless interactions between users and Honeydoers. Additionally, I actively contributed to the Agile workflow, attending morning stand-ups and afternoon demos to ensure effective communication and smooth progress.
+            </p>
+
+            <p>
+              By embracing an Agile methodology, our team was able to foster collaboration, adaptability, and efficient development practices. Our collective efforts led to the successful deployment of the Honeydo Helper web application to AWS.
+            </p>
+
+            <p>
+              Through my involvement in this capstone project, I honed my skills in software engineering, project management, and collaborative problem-solving. I am confident that my experience with Honeydo Helper showcases my ability to contribute to the development of innovative and user-friendly applications as a software engineer.
+            </p>
+          </div>
+
+          <div class="project-skills">
+            <div class="skills">
+              <div class="skill glass">
+                <p>HTML</p>
+              </div>
+              <div class="skill glass">
+                <p>CSS</p>
+              </div>
+              <div class="skill glass">
+                <p>Bootstrap</p>
+              </div>
+              <div class="skill glass">
+                <p>Java</p>
+              </div>
+              <div class="skill glass">
+                <p>JavaScript</p>
+              </div>
+              <div class="skill glass">
+                <p>Spring Boot</p>
+              </div>
+              <div class="skill glass">
+                <p>Spring Boot Security</p>
+              </div>
+              <div class="skill glass">
+                <p>Filestack API</p>
+              </div>
+            </div>
+
+          </div>
+
+        </article>
+
       </div>
-    </div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
-      <defs>
-        <filter id="blur-contrast-composite">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur" />
-          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="contrast" />
-          <feComposite in="SourceGraphic" in2="contrast" operator="atop"/>
-        </filter>
-      </defs>
-    </svg>
-  </section>
-
+    </section>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+    <defs>
+      <filter id="blur-contrast-composite">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="contrast" />
+        <feComposite in="SourceGraphic" in2="contrast" operator="atop"/>
+      </filter>
+    </defs>
+  </svg>
 </main>
+
 <!-- jQuery -->
 <script src="js/jquery-3.6.3.js"></script>
 <!-- My JS -->
@@ -81,5 +146,7 @@
 <script src="js/nav.js"></script>
 <!-- BG JS -->
 <script src="js/bg-circles.js"></script>
+
+
 </body>
 </html>

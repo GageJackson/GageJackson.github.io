@@ -296,6 +296,9 @@ button {
     box-shadow: 0 .5rem 2rem 0 hsla(230 33% 7%/ 0.35);
     backdrop-filter: blur(4rem);
     -webkit-backdrop-filter: blur(4rem);
+
+    border-radius: 1rem;
+    overflow: hidden;
 }
 
 .gooey {
