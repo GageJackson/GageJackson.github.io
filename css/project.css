@@ -1,15 +1,11 @@
-.portfolio-primary {
+.project-primary {
     display: grid;
     grid-template-columns: repeat(12,1fr);
     grid-template-rows: repeat(auto-fill,1fr);
     grid-auto-flow: dense;
 
     gap: 3rem;
-}
-
-.projects {
-    grid-column: span 12;
-    /*grid-row: span 6;*/
+    padding: 2rem;
 }
 
 .project {
@@ -32,8 +28,9 @@
 
 .github-link{
     position: absolute;
-    left: 85%;
-    top: 5%;
+    left: 90%;
+    top: 10%;
+    transform: translate(-50%, -50%);
 
     width: 3rem;
     aspect-ratio: 1;
@@ -47,6 +44,7 @@
 .github-link-img {
     width: 80%;
     aspect-ratio: 1;
+
 }
 
 .image {
@@ -96,3 +94,65 @@
 
     padding: 1rem;
 }
+
+
+/*///////////////////////////////////////////////////////
+Grid Layout Mobile
+///////////////////////////////////////////////////////*/
+@media screen and (min-width: 900px) and (max-width: 1200px){
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 899px){
+    .project-img {
+        grid-column: 1 / span 12;
+        grid-row: 1 / span 12;
+    }
+
+    .project-description {
+        grid-column: 1 / span 12;
+        grid-row: 19 / span 16;
+        padding: 1rem;
+    }
+
+    .project-skills {
+        grid-column: 1 / span 12;
+        grid-row: 13 / span 6;
+    }
+
+    .skill {
+        grid-column: span 3;
+        grid-row: span 3;
+    }
+}
+
+@media screen and (max-width: 599px){
+    .project-primary {
+        display: grid;
+        row-gap: 0;
+        column-gap: 0;
+        /*padding: 2rem;    */
+    }
+
+    .project-img {
+        grid-column: 1 / span 12;
+        grid-row: 1 / span 12;
+    }
+
+    .project-description {
+        grid-column: 1 / span 12;
+        grid-row: 19 / span 16;
+        padding: .5rem;
+    }
+
+    .project-skills {
+        grid-column: 1 / span 12;
+        grid-row: 13 / span 6;
+    }
+
+    .skill {
+        grid-column: span 3;
+        grid-row: span 3;
+    }
+}
+
