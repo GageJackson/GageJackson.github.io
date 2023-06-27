@@ -3,30 +3,15 @@ let updateRate = 1000 / 60;
 let lastTime = 0;
 let elapsedTime = 0;
 
-
-
-// let info = document.getElementById("infoDisplay");
-// let infoCtx = info.getContext('2d');
-// info.width = window.innerWidth;
-// info.height = 50;
-
 // canvas variables
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext('2d');
-
-// const parent = canvas.parentNode;
-// const width = parent.offsetWidth;
-// const height = width * 9 / 16;
-// canvas.width = width;
-// canvas.height = height;
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 let cw = canvas.width;
 let ch = canvas.height;
-console.log(cw);
-console.log(ch);
 
 // fps
 let fps = 0;
@@ -41,10 +26,10 @@ let size = 200 * cw / 1000;
 
 function main(timestamp) {
 
-    // canvas.width = window.innerWidth;
-    // canvas.height = window.innerHeight;
-    // cw = canvas.width;
-    // ch = canvas.height;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    cw = canvas.width;
+    ch = canvas.height;
 
     // accumulating time and frames for FPS
     accumulatedTime += timestamp - lastTime;
