@@ -1,72 +1,23 @@
 section {
-    margin-block: 20rem;
+    margin-block: 30rem;
 }
 
-
-.welcome {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    margin-block: 20rem;
-}
-
-.welcome  p {
-    text-align: center;
-}
-
-.latest-works {
-    display: grid;
-    gap: 1rem;
-    padding: 2rem;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-rows: repeat(auto-fill,1fr);
-    grid-auto-flow: dense;
-}
-
-.projectCards {
-    gap: 1rem;
+.project-card {
     grid-column: span 4;
     grid-row: span 4;
 
     transition: all ease-in 200ms;
-
-    width: 100%;
-    aspect-ratio: 1;
-    padding: 0;
 }
 
-.projectCards:hover {
+.project-card:hover {
     scale: 105%;
 }
 
-.projectCards > a{
-    width: 100%;
-    aspect-ratio: 1;
-}
-
-.about-me {
-    display: grid;
-    gap: 1rem;
-    padding: 2rem;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-rows: repeat(auto-fill,1fr);
-    grid-auto-flow: dense;
-}
-
 .about-me-card {
-    gap: 1rem;
     grid-column: span 12;
     grid-row: span 1;
 
-    border-radius: 1rem;
-
     padding: 2rem;
-}
-
-.about-me-card p {
-    margin-block-end: 2rem;
-    line-height: 1.6rem;
 }
 
 .section-title {
@@ -75,7 +26,6 @@ section {
 
 .resume-skills {
     width: 60%;
-    padding: 2rem;
     margin-inline: auto;
 }
 
@@ -93,25 +43,25 @@ Index Grid Layout Mobile
 }
 
 @media screen and (min-width: 600px) and (max-width: 899px){
-    .welcome {
+    section {
         margin-block: 10rem;
+        padding-inline: 1rem;
     }
 
-    .projectCards {
-        gap: 1rem;
+    .project-card {
         grid-column: span 6;
         grid-row: span 2;
     }
 }
 
 @media screen and (max-width: 599px){
-    .welcome {
+    section {
         margin-block: 5rem;
+        padding-inline: 1rem;
     }
 
-    .projectCards {
-        gap: 1rem;
-        grid-column: span 12;
+    .project-card {
+        grid-column: span 6;
         grid-row: span 2;
     }
 

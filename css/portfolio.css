@@ -1,14 +1,9 @@
-.contentContainer > section {
+section {
     padding: 2rem;
 }
 
 .project {
-    display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-rows: repeat(auto-fill,1fr);
-    grid-auto-flow: dense;
-
     margin-block-end: 5rem;
 }
 
@@ -16,24 +11,34 @@
 .project-img {
     grid-column: 1 / span 4;
     grid-row: 1 / span 4;
-    width: 100%;
-    aspect-ratio: 1;
-
     transition: all ease-in 300ms;
+}
+
+.project-img a{
+    height: 100%;
+    width: 100%;
+}
+
+.cover{
+    /*object-fit: fill;*/
+    /*height: 5rem;*/
+
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+    height: 100%;
 }
 
 .project-img:hover {
     border: var(--color-tertiary-light) solid 1px;
     scale: 105%;
     box-shadow: 0 1rem 1rem 0 hsla(230 33% 7%/ 0.75);
-
 }
 
 .project-description {
     grid-column: 5 / span 8;
     grid-row: 1 / span 2;
 
-    /*color: var(--color-white);*/
     user-select: none;
     text-decoration: none;
     text-underline: none;
@@ -42,10 +47,6 @@
 
 .project-description h2 {
     text-align: start;
-}
-
-.project-description p {
-    line-height: 1.5rem;
 }
 
 .project-skills {
@@ -78,63 +79,33 @@ Grid Layout Mobile
         grid-column: 1 / span 12;
         grid-row: 5 / span 2;
     }
-
-    .skill {
-        grid-column: span 4;
-        grid-row: span 4;
-        padding: .5rem;
-    }
 }
 
 @media screen and (max-width: 599px){
-    .project {
-        padding-inline: .5rem;
-        padding-block: .5rem;
-    }
-
-    .project-description {
-        grid-column: 1 / span 12;
-        grid-row: 7 / span 6;
-        padding: .5rem;
-    }
 
     .project-img {
         grid-column: 1 / span 12;
-        grid-row: 1 / span 12;
+        grid-row: 1 / span 2;
     }
 
     .project-description {
         grid-column: 1 / span 12;
-        grid-row: 7 / span 6;
+        grid-row: 3 / span 6;
         padding: .5rem;
-    }
-
-    .project-description  p {
-        /*display: none;*/
     }
 
     .project-skills {
         grid-column: 1 / span 12;
-        grid-row: 13;
+        grid-row: 9;
     }
 
-    .skill {
-        grid-column: span 6;
-        grid-row: span 6;
-        padding: .5rem;
-    }
-
-    .skills {
-        gap: .5rem;
+    .cover {
+        height: 7.5rem;
     }
 }
 
 @media screen and (min-width: 450px) and (max-width: 599px){
-    .skill {
-        grid-column: span 4;
-        grid-row: span 4;
-        padding: .5rem;
-    }
+
 }
 
 @media screen and (max-width: 450px){
