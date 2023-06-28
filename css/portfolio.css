@@ -29,11 +29,6 @@
 
 }
 
-.image {
-    width: 100%;
-    aspect-ratio: 1;
-}
-
 .project-description {
     grid-column: 5 / span 8;
     grid-row: 1 / span 2;

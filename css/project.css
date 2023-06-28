@@ -35,6 +35,7 @@
     width: 3rem;
     aspect-ratio: 1;
     padding: .5rem;
+    z-index: 10;
 
     display: flex;
     align-items: center;
@@ -47,10 +48,7 @@
 
 }
 
-.image {
-    width: 100%;
-    aspect-ratio: 1;
-}
+
 
 .project-description {
     grid-column: 7 / span 6;

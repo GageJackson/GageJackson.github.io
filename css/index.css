@@ -1,3 +1,8 @@
+section {
+    margin-block: 20rem;
+}
+
+
 .welcome {
     display: flex;
     flex-direction: column;
@@ -17,36 +22,27 @@
     grid-template-columns: repeat(12,1fr);
     grid-template-rows: repeat(auto-fill,1fr);
     grid-auto-flow: dense;
-    margin-block-end: 5rem;
 }
 
 .projectCards {
     gap: 1rem;
     grid-column: span 4;
-    grid-row: span 2;
+    grid-row: span 4;
 
-    border-radius: 1rem;
-
-    overflow: hidden;
     transition: all ease-in 200ms;
+
+    width: 100%;
+    aspect-ratio: 1;
+    padding: 0;
 }
 
 .projectCards:hover {
     scale: 105%;
 }
 
-.project_card_head {
-    padding: 0;
-}
-
-.project_card_body {
-    padding-block: 1rem;
-    padding-inline: 1rem;
-}
-
-.project_card_foot {
-    padding-block: 2rem;
-    padding-inline: 1rem;
+.projectCards > a{
+    width: 100%;
+    aspect-ratio: 1;
 }
 
 .about-me {
@@ -56,7 +52,6 @@
     grid-template-columns: repeat(12,1fr);
     grid-template-rows: repeat(auto-fill,1fr);
     grid-auto-flow: dense;
-    margin-block-end: 5rem;
 }
 
 .about-me-card {
@@ -74,30 +69,14 @@
     line-height: 1.6rem;
 }
 
-
-
 .section-title {
     grid-column: span 12;
 }
 
-
-
-.imageBlock {
-    width: 100%;
-    aspect-ratio: 1;
-    background-color: var(--color-primary);
-    opacity: 65%;
-    mix-blend-mode: hard-light;
-}
-
-.imageBlock:hover {
-    opacity: 90%;
-    mix-blend-mode: hard-light;
-}
-
 .resume-skills {
+    width: 60%;
     padding: 2rem;
-    margin-block-end: 5rem;
+    margin-inline: auto;
 }
 
 .resume-skills > h2 {
@@ -123,12 +102,6 @@ Index Grid Layout Mobile
         grid-column: span 6;
         grid-row: span 2;
     }
-
-    .skill {
-        gap: 1rem;
-        grid-column: span 3;
-        grid-row: span 3;
-    }
 }
 
 @media screen and (max-width: 599px){
@@ -142,17 +115,11 @@ Index Grid Layout Mobile
         grid-row: span 2;
     }
 
-    .skill {
-        gap: 1rem;
-        grid-column: span 4;
-        grid-row: span 4;
+    .resume-skills {
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 399px){
-    .skill {
-        gap: 1rem;
-        grid-column: span 6;
-        grid-row: span 6;
-    }
+
 }
