@@ -7,72 +7,57 @@
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+
     <title>Gage Jackson</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/resume.css" />
+    <link rel="stylesheet" href="css/header.css" />
 
+    <!-- JS -->
+    <script src="js/partials.js" defer></script>
+    <script src="js/skill-box.js" defer></script>
+    <script src="js/nav.js" defer></script>
+    <script src="js/bg-circles.js" defer></script>
 </head>
+
 <body class="dark-mode" data-darkMode="true">
 
 <!-- header section -->
-<header class="primary-header flex">
-    <div id="logoContainer">
-        <span id="logo">Gage Jackson</span>
-    </div>
+<header id="header-placeholder"></header>
 
-    <button id="btn-nav" class="mobile-nav-toggle btn"
-            aria-controls="primary-nav" aria-expanded="false">
-        <span class="sr-only" hidden="hidden">Menu</span>
-    </button>
-
-    <nav>
-        <ul id="primary-nav" class="primary-nav flex" data-visible="false">
-            <li class="active">
-                <a href="index.html">
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="portfolio.html">
-                    Portfolio
-                </a>
-            </li>
-            <li>
-                <a href="resume.html">
-                    Resume
-                </a>
-            </li>
-            <li>
-                <button id="dark-mode-toggle" class="dark-mode" data-darkMode="true">
-                    Dark Mode
-                </button>
-            </li>
-        </ul>
-    </nav>
-</header>
 <main class="container">
     <canvas id="canvas" class="bgGoo gooey"></canvas>
     <div class="contentContainer">
+        <section class="welcome">
+            <h1>My Resume</h1>
+            <p class="tagline center-text">Experiences and skills I've picked up along the way</p>
+            <a href="mailto:wm.gagejackson@gmail.com" class="btn cta-btn">let's chat!</a>
+        </section>
+
         <section class="resume-primary grid">
             <div class="resume-links">
                 <div class="flex-row">
                     <div class="resume-link-card glass">
-                        <a href="mailto:wm.gagejackson.com"><img src="assets/icons/email.png"></a>
+                        <a href="mailto:wm.gagejackson@gmail.com"><img src="assets/icons/email.png"></a>
                     </div>
 
                     <div class="resume-link-card glass">
-                        <a href="https://github.com/GageJackson"><img src="assets/icons/github-sign.png"></a>
+                        <a href="https://github.com/GageJackson" target="_blank"><img src="assets/icons/github-sign.png"></a>
                     </div>
 
                     <div class="resume-link-card glass">
-                        <a href="https://www.linkedin.com/in/wm-gage-jackson/"><img src="assets/icons/linkedin-sign.png"></a>
+                        <a href="https://www.linkedin.com/in/wm-gage-jackson/" target="_blank"><img src="assets/icons/linkedin-sign.png"></a>
                     </div>
 
                     <div class="resume-link-card glass">
-                        <a href="https://docs.google.com/document/d/1XkOJDr4vBxvs9KkW1X3jMI8Sq5TCZWYqNgszzQPWbKA/edit?usp=sharing"><img src="assets/icons/download-symbol.png"></a>
+                        <a href="https://docs.google.com/document/d/1XkOJDr4vBxvs9KkW1X3jMI8Sq5TCZWYqNgszzQPWbKA/edit?usp=sharing" target="_blank"><img src="assets/icons/download-symbol.png"></a>
                     </div>
                 </div>
             </div>
@@ -184,26 +169,16 @@
             </div>
         </section>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
-        <defs>
-            <filter id="blur-contrast-composite">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur" />
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="contrast" />
-                <feComposite in="SourceGraphic" in2="contrast" operator="atop"/>
-            </filter>
-        </defs>
-    </svg>
 </main>
 
-<!-- jQuery -->
-<script src="js/jquery-3.6.3.js"></script>
-<!-- My JS -->
-<script src="js/main.js"></script>
-<!-- Nav JS -->
-<script src="js/nav.js"></script>
-<!-- BG JS -->
-<script src="js/bg-circles.js"></script>
-
-
+<svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+    <defs>
+        <filter id="blur-contrast-composite">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="contrast" />
+            <feComposite in="SourceGraphic" in2="contrast" operator="atop"/>
+        </filter>
+    </defs>
+</svg>
 </body>
 </html>
