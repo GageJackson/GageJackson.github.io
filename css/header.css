@@ -1,0 +1,124 @@
+/* primary header */
+#logoContainer {
+    padding: 1.75rem 0 0 4rem;
+}
+
+#logo {
+    font-family: var(--ff-logo);
+    font-size: var(--fs-logo);
+    font-style: italic;
+
+    user-select: none;
+}
+
+.primary-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-block-end: 1rem;
+
+    z-index: 9999;
+
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    background-color: var(--color-primary-dark);
+}
+
+.primary-nav {
+    list-style: none;
+
+    --gap: clamp(1.5rem, 5vw, 3rem);
+    padding-block: 1rem;
+    padding-inline: clamp(1rem, 5vw ,10rem);
+}
+
+.primary-nav a {
+    text-decoration: none;
+    font-size: var(--fs-300);
+    color: inherit;
+}
+
+.primary-nav li {
+    display: flex;
+    align-content: center;
+}
+
+.mobile-nav-toggle {
+    display: none;
+    position: fixed;
+    background-color: var(--color-tertiary-dark);
+}
+
+#dark-mode-toggle {
+    padding: 0;
+    font-size: var(--fs-300);
+    color: var(--color-tertiary-dark);
+}
+
+header[data-darkMode="false"] {
+    background-color: var(--color-neutral-1);
+}
+
+header[data-darkMode="true"] {
+    background-color: var(--color-primary-dark);
+}
+
+@media (max-width: 60rem){
+    .primary-nav{
+        position: fixed;
+        z-index: 1000;
+
+        flex-direction: column;
+        --gap: 3rem;
+
+        padding-block: 5rem;
+        inset: 0 0 0 30%;
+
+        background: hsla(0 0% 50% / 0.15);
+        border: var(--color-neutral-3) solid 1px;
+
+        box-shadow: 0 .5rem 1rem 0 hsla(230 33% 7%/ 0.5);
+        backdrop-filter: blur(4rem);
+        -webkit-backdrop-filter: blur(4rem);
+
+        border-radius: 1rem;
+        overflow: hidden;
+
+        transform: translateX(100%);
+        transition: transform 500ms ease;
+    }
+
+    .primary-nav[data-visible="true"]{
+        transform: translateX(0%);
+    }
+
+    .mobile-nav-toggle {
+        position: absolute;
+        top: 1.5rem;
+        right: 2rem;
+
+        z-index: 9999;
+        display: block;
+
+        width: 2rem;
+        aspect-ratio: 1;
+
+        -webkit-mask-image: url("../assets/icons/bars.svg");
+        -webkit-mask-repeat: no-repeat;
+        mask-image: url("../assets/icons/bars.svg");
+        mask-repeat: no-repeat;
+
+        border: none;
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"] {
+        -webkit-mask-image: url("../assets/icons/x.svg");
+        mask-image: url("../assets/icons/x.svg");
+    }
+
+    #logoContainer {
+        padding: 1.75rem 0 0 2rem;
+    }
+}
