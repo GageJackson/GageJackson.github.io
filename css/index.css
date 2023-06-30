@@ -11,6 +11,8 @@
 }
 
 .project:hover {
+    border: var(--color-tertiary-light) solid 2px;
+
     scale: var(--hover-scale);
 }
 

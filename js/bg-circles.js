@@ -80,11 +80,9 @@ function update() {
 
 function render() {
     ctx.clearRect(0, 0, cw, ch);
-    // infoCtx.clearRect(0, 0, cw, ch);
 
     // circles
     for (let i = 0; i < circles.length; i++) {
-        // Set the fill style and draw a rectangle
         ctx.fillStyle = circles[i].gradient;
         ctx.beginPath();
         const radius = circles[i].size;
@@ -100,13 +98,10 @@ for (let i = 0; i < numCircles; i++) {
     let randSize = Math.random() * size;
 
     // Create a radial gradient
-    const gradient = ctx.createRadialGradient((cw/2), 0, 0, (cw/2), 0, ch * 1.25);
-    //const gradient = ctx.createRadialGradient(circles[i].x, circles[i].y, 0, circles[i].x, circles[i].y, circles[i].size);
-
-    // Add three color stops
-    gradient.addColorStop(0, "hsla(9, 84%, 55%, 1)");
-    gradient.addColorStop(0.5, "hsla(330, 66%, 41%, 1)");
-    gradient.addColorStop(1, "hsla(271,94%,20%, 1)");
+    const gradient = ctx.createRadialGradient((cw/2), 0, 0, (cw/2), 0, ch);
+    gradient.addColorStop(0, "hsl(43,100%,50%)");
+    gradient.addColorStop(0.5, "hsl(28,100%,50%)");
+    gradient.addColorStop(1, "hsl(16,100%,50%)");
 
     circles.push({
         size: randSize,

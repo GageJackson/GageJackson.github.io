@@ -16,7 +16,6 @@ function setNav() {
             primaryNav.setAttribute("data-visible", "false");
             navToggle.setAttribute("aria-expanded", "false");
         }
-        console.log(visibility);
     });
 
     darkModeToggle.addEventListener('click', () => {
