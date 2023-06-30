@@ -234,6 +234,13 @@ button {
 /*------------------------*/
 section {
     margin-block: 30rem;
+    padding: 2rem;
+}
+@media screen and (max-width:600px) {
+    section {
+        padding: 1rem;
+    }
+
 }
 
 /* Goo Bg Styles */
@@ -270,14 +277,9 @@ canvas {
     place-self: center;
     text-align: center;
     height: 100%;
-    width: calc(100% - 6rem);
 }
 
 @media screen and (max-width:600px) {
-    .contentContainer {
-        width: calc(100% - 1rem);
-    }
-
     .contentContainer section {
         margin-block: 10rem;
     }
