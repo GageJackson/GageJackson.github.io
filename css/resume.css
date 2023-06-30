@@ -1,8 +1,3 @@
-
-.resume-card {
-    padding: 1rem;
-}
-
 .resume-link-card {
     padding: .25rem;
     height: 3rem;
@@ -27,7 +22,7 @@
     opacity: 50%;
     mix-blend-mode: overlay;
 
-    width: 60%;
+    width: 75%;
 }
 
 .resume-title {
@@ -99,15 +94,6 @@ Resume Grid Layout Mobile
 }
 
 @media screen and (min-width: 600px) and (max-width: 899px){
-
-}
-
-@media screen and (max-width: 599px){
-
-}
-
-@media screen and (max-width: 899px){
-
     .resume-experiences {
         grid-column: 1 / span 12;
         grid-row: 2 / span 32;
@@ -122,5 +108,21 @@ Resume Grid Layout Mobile
         grid-column: 1 / span 12;
         grid-row: 34 / span 16;
     }
+}
 
+@media screen and (max-width: 599px){
+    .resume-experiences {
+        grid-column: 1 / span 12;
+        grid-row: 2 / span 32;
+    }
+
+    .resume-education {
+        grid-column: 1 / span 12;
+        grid-row: 50 / span 8;
+    }
+
+    .resume-skills {
+        grid-column: 1 / span 12;
+        grid-row: 34 / span 16;
+    }
 }

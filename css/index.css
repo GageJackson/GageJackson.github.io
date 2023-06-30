@@ -1,27 +1,22 @@
-section {
-    margin-block: 30rem;
+.section-title {
+    grid-column: span 12;
 }
 
-.project-card {
+.project {
     grid-column: span 4;
     grid-row: span 4;
 
+    padding: 0; /* overriding card padding */
     transition: all ease-in 200ms;
 }
 
-.project-card:hover {
-    scale: 105%;
+.project:hover {
+    scale: 102%;
 }
 
 .about-me-card {
     grid-column: span 12;
     grid-row: span 1;
-
-    padding: 2rem;
-}
-
-.section-title {
-    grid-column: span 12;
 }
 
 .resume-skills {
@@ -43,14 +38,14 @@ Index Grid Layout Mobile
 }
 
 @media screen and (min-width: 600px) and (max-width: 899px){
-    .project-card {
+    .project {
         grid-column: span 6;
         grid-row: span 2;
     }
 }
 
 @media screen and (max-width: 599px){
-    .project-card {
+    .project {
         grid-column: span 6;
         grid-row: span 2;
     }
@@ -58,8 +53,4 @@ Index Grid Layout Mobile
     .resume-skills {
         width: 100%;
     }
-}
-
-@media screen and (max-width: 399px){
-
 }

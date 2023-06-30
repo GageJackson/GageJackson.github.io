@@ -140,19 +140,19 @@ body[data-darkMode="true"] {
 
 /* Heading Styles */
 h1 {
-    font-size: clamp(var(--fs-600), var(--fs-700), var(--fs-800));
+    font-size: var(--fs-700);
     font-weight: var(--fw-bold);
     text-align: center;
 }
 
 h2 {
-    font-size: clamp(var(--fs-400), var(--fs-500), var(--fs-600));
+    font-size: var(--fs-500);
     font-weight: var(--fw-bold);
     text-align: center;
 }
 
 h3 {
-    font-size: clamp(var(--fs-300), var(--fs-400), var(--fs-500));
+    font-size: var(--fs-400);
     font-weight: var(--fw-bold);
     text-align: start;
     margin-block: 1rem;
@@ -209,7 +209,6 @@ button {
 }
 
 .btn {
-    margin: 2rem;
     padding-block: 1rem;
     padding-inline: 2rem;
 }
@@ -220,14 +219,15 @@ button {
     border: var(--color-tertiary-light) solid 1px;
     border-radius: .75rem;
     transition: all ease-in 300ms;
-    box-shadow: 0 .5rem .5rem 0 hsla(230 33% 7%/ 0.75);
+    box-shadow: 0 .2rem .45rem 0 hsla(230 33% 7%/ 0.3);
+
 
 }
 
 .cta-btn:hover {
     background: var(--color-tertiary-light);
     scale: 105%;
-    box-shadow: 0 1rem 1rem 0 hsla(230 33% 7%/ 0.75);
+    box-shadow: 0 .45rem .65rem 0 hsla(230 33% 7%/ 0.3);
 }
 
 /* Section Styles */
@@ -240,7 +240,6 @@ section {
     section {
         padding: 1rem;
     }
-
 }
 
 /* Goo Bg Styles */
@@ -279,9 +278,15 @@ canvas {
     height: 100%;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:599px) {
     .contentContainer section {
         margin-block: 10rem;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width: 900px){
+    .contentContainer section {
+        margin-block: 15rem;
     }
 }
 
@@ -298,27 +303,26 @@ canvas {
 .glass {
     background: hsla(0 0% 50% / 0.15);
     border: var(--color-neutral-3) solid 1px;
-
-    box-shadow: 0 .5rem 1rem 0 hsla(230 33% 7%/ 0.5);
     backdrop-filter: blur(4rem);
     -webkit-backdrop-filter: blur(4rem);
+}
 
+.card {
     border-radius: 1rem;
     overflow: hidden;
+    box-shadow: 0 .5rem 1rem 0 hsla(230 33% 7%/ 0.5);
+    padding: 1rem;
 }
 
 /* Skills */
 .skill {
-    width: 80px;
-    aspect-ratio: 1;
+    width: 80px !important;
+    padding: .5rem;
+    font-size: .75rem;
 
     display: flex;
     justify-content: center;
     align-items: end;
-
-    padding: .5rem;
-
-    font-size: .75rem;
 }
 
 .skill p {
@@ -328,16 +332,21 @@ canvas {
 
 /* Other */
 
-.image {
-    width: 100%;
-    aspect-ratio: 1;
-
+.glass-image {
     mix-blend-mode: hard-light;
-    opacity: 85%;
+    opacity: 65%;
+    width: 100%;
+    border-radius: 1rem;
 }
 
-.square-card {
+.square {
     width: 100%;
     aspect-ratio: 1;
-    padding: 0;
+}
+
+.cover{
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+    height: 100%;
 }
