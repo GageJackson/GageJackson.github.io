@@ -7,11 +7,11 @@
     grid-row: span 4;
 
     padding: 0; /* overriding card padding */
-    transition: all ease-in 200ms;
+    transition: var(--transitions);
 }
 
 .project:hover {
-    scale: 102%;
+    scale: var(--hover-scale);
 }
 
 .about-me-card {

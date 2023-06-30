@@ -1,5 +1,4 @@
 .project {
-    gap: 1rem;
     margin-block-end: 5rem;
 }
 
@@ -17,8 +16,8 @@
 
 .project-img:hover {
     border: var(--color-tertiary-light) solid 1px;
-    scale: 102%;
-    box-shadow: 0 1rem 1rem 0 hsla(230 33% 7%/ 0.75);
+    scale: var(--hover-scale);
+    box-shadow:var(--hard-shadow);
 }
 
 .project-description {
@@ -87,10 +86,6 @@ Grid Layout Mobile
     .cover {
         height: 7.5rem;
     }
-}
-
-@media screen and (min-width: 450px) and (max-width: 599px){
-
 }
 
 @media screen and (max-width: 450px){
