@@ -5,12 +5,14 @@ function setButtons(){
     const btnResume = document.getElementById('resume-btn');
 
     btnHome.addEventListener('click', async () => changeContent('home'));
+
     btnAbout.addEventListener('click', async () => changeContent('about'));
+
     btnPortfolio.addEventListener('click', async () => {
-        await changeContent('portfolio');
-        formatSkillsBox();
-        createProjectLinks();
+        await fetchPortfolio();
+        setDarkMode();
     });
+
     btnResume.addEventListener('click', async () => {
         await changeContent('resume');
         formatSkillsBox();
@@ -31,18 +33,15 @@ function createProjectLinks(){
     const btnHoneydo = document.getElementById('honeydo-btn');
 
     btnDoglister.addEventListener('click', async () => {
-        await changeContent('projects/doglister');
-        formatSkillsBox();
+        await fetchProject('doglister');
     });
 
     btnWeather.addEventListener('click', async () => {
-        await changeContent('projects/weather-app');
-        formatSkillsBox();
+        await fetchProject('weather');
     });
 
     btnHoneydo.addEventListener('click', async () => {
-        await changeContent('projects/honeydo-helper');
-        formatSkillsBox();
+        await fetchProject('honeydo');
     });
 }
 

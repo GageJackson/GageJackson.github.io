@@ -1,9 +1,9 @@
 function formatSkillsBox(){
     const containers = document.querySelectorAll('.skills');
 
-    const skillBoxSize = 96;
+    const skillBoxSize = 72;
     const minimumSpacing = 10;
-    const maximumSpacing = 96;
+    const maximumSpacing = 72;
 
     const containerWidth = containers.item(0).getBoundingClientRect().width;
     const skillsPerRow = Math.floor(containerWidth / (skillBoxSize + minimumSpacing));

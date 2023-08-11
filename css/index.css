@@ -127,29 +127,29 @@ Resume Grid Layout Mobile
     }
 }
 
-.project {
+.portfolio {
     margin-block-end: 5rem;
 }
 
-.project-img {
+.portfolio-img {
     grid-column: 1 / span 4;
     grid-row: 1 / span 4;
     transition: all ease-in 300ms;
     padding: 0; /* overriding card padding */
 }
 
-.project-img a{
+.portfolio-img a{
     height: 100%;
     width: 100%;
 }
 
-.project-img:hover {
+.portfolio-img:hover {
     border: var(--color-tertiary-light) solid 2px;
     scale: var(--hover-scale);
     box-shadow:var(--hard-shadow);
 }
 
-.project-description {
+.portfolio-description {
     grid-column: 5 / span 8;
     grid-row: 1 / span 2;
 
@@ -158,11 +158,11 @@ Resume Grid Layout Mobile
     text-underline: none;
 }
 
-.project-description h2 {
+.portfolio-description h2 {
     text-align: start;
 }
 
-.project-skills {
+.portfolio-skills {
     grid-column: 5 / span 8;
     grid-row: 3 / span 2;
 }
@@ -177,18 +177,18 @@ Grid Layout Mobile
 }
 
 @media screen and (min-width: 600px) and (max-width: 899px){
-    .project-img {
+    .portfolio-img {
         grid-column: 1 / span 4;
         grid-row: 1 / span 4;
     }
 
-    .project-description {
+    .portfolio-description {
         grid-column: 5 / span 8;
         grid-row: 1/ span 4;
         padding: 1rem;
     }
 
-    .project-skills {
+    .portfolio-skills {
         grid-column: 1 / span 12;
         grid-row: 5 / span 2;
     }
@@ -196,33 +196,29 @@ Grid Layout Mobile
 
 @media screen and (max-width: 599px){
 
-    .project-img {
+    .portfolio-img {
         grid-column: 1 / span 12;
         grid-row: 1 / span 2;
     }
 
-    .project-description {
+    .portfolio-description {
         grid-column: 1 / span 12;
         grid-row: 3 / span 6;
         padding: 1rem;
     }
 
-    .project-skills {
+    .portfolio-skills {
         grid-column: 1 / span 12;
         grid-row: 9;
-    }
-
-    .cover {
-        height: 7.5rem;
     }
 }
 
 @media screen and (max-width: 450px){
-    .project-description  h2 {
+    .portfolio-description  h2 {
         font-size: 1rem;
     }
 
-    .project-description  p {
+    .portfolio-description  p {
         font-size: .825rem;
         line-height: 1rem;
     }
@@ -312,6 +308,64 @@ Grid Layout Mobile
     .project-skills {
         grid-column: 1 / span 12;
         grid-row: 13 / span 6;
+    }
+}
+
+
+
+.about-se {
+    grid-column: 1 / span 4;
+    grid-row: 1;
+}
+
+.about-cr {
+    grid-column: 5 / span 4;
+    grid-row: 1;
+}
+
+.about-dr {
+    grid-column: 9 / span 4;
+    grid-row: 1;
+}
+
+/*///////////////////////////////////////////////////////
+Grid Layout Mobile
+///////////////////////////////////////////////////////*/
+@media screen and (min-width: 900px) and (max-width: 1200px){
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 899px){
+    .about-se {
+        grid-column: 1 / span 6;
+        grid-row: 1;
+    }
+
+    .about-cr {
+        grid-column: 7 / span 6;
+        grid-row: 1;
+    }
+
+    .about-dr {
+        grid-column: 1 / span 6;
+        grid-row: 2;
+    }
+}
+
+@media screen and (max-width: 599px){
+    .about-se {
+        grid-column: 1 / span 12;
+        grid-row: 1;
+    }
+
+    .about-cr {
+        grid-column: 1 / span 12;
+        grid-row: 2;
+    }
+
+    .about-dr {
+        grid-column: 1 / span 12;
+        grid-row: 3;
     }
 }
 

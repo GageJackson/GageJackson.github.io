@@ -13,11 +13,13 @@ function setDarkMode(){
         doDarkMode(darkMode, darkElements, darkModeToggle);
         localStorage.setItem("darkMode",darkMode);
     });
+
+    doDarkMode(darkMode, darkElements, darkModeToggle);
 }
 
 
 function doDarkMode(darkMode, darkElements, darkModeToggle){
-    if(darkMode == null){
+    if(darkMode === null){
         darkMode = true;
     }
 
