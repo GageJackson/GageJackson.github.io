@@ -21,7 +21,7 @@ let accumulatedFrames = 0;
 let numCircles = 30;
 let circles = [];
 let velocity = 1;
-let size = 200 * cw / 1000;
+let size = (150 * (cw / 1000));
 // console.log(size);
 
 function main(timestamp) {
@@ -95,13 +95,13 @@ function render() {
 
 // create the circles
 for (let i = 0; i < numCircles; i++) {
-    let randSize = Math.random() * size;
+    let randSize = (Math.random() * size) + 0;
 
     // Create a radial gradient
-    const gradient = ctx.createRadialGradient((cw/2), 0, 0, (cw/2), 0, ch);
+    const gradient = ctx.createRadialGradient((cw/2), 0, 0, (cw/2), 0, Math.max(ch,cw));
     gradient.addColorStop(0, "hsl(43,100%,50%)");
-    gradient.addColorStop(0.5, "hsl(28,100%,50%)");
-    gradient.addColorStop(1, "hsl(16,100%,50%)");
+    gradient.addColorStop(0.5, "hsl(28,93%,48%)");
+    gradient.addColorStop(1, "hsl(16,86%,46%)");
 
     circles.push({
         size: randSize,

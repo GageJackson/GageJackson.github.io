@@ -1,58 +1,371 @@
-.section-title {
+.resume-link-card {
+    padding: .25rem;
+    height: 3rem;
+    aspect-ratio: 1;
+}
+
+.resume-link-card:hover,
+.resume-link-card:focus{
+    border: solid 2px var(--color-tertiary-dark);
+}
+
+.resume-link-card a{
+    width: 100%;
+    aspect-ratio: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resume-link-card img{
+    opacity: 50%;
+    mix-blend-mode: overlay;
+
+    width: 75%;
+}
+
+.resume-title {
+    text-align: start;
     grid-column: span 12;
 }
 
-.project {
-    grid-column: span 4;
-    grid-row: span 4;
-
-    padding: 0; /* overriding card padding */
-    transition: var(--transitions);
+article span {
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
-.project:hover {
-    border: var(--color-tertiary-light) solid 2px;
-
-    scale: var(--hover-scale);
+.flex-row {
+    justify-content: end;
 }
 
-.about-me-card {
-    grid-column: span 12;
-    grid-row: span 1;
+/*///////////////////////////////////////////////////////
+Resume Grid Layout Desktop
+///////////////////////////////////////////////////////*/
+.resume-primary {
+    row-gap: 1rem;
+    column-gap: 2rem;
+    padding: 2rem;
+
+    margin-block-end: 3rem;
+}
+
+.resume-links {
+    grid-column: 3 / span 10;
+    grid-row: 1 / span 1;
+    margin-block-end: 2rem;
+}
+
+.resume-experiences {
+    grid-column: 1 / span 8;
+    grid-row: 2 / span 32;
+}
+
+.resume-education {
+    grid-column: 9 / span 4;
+    grid-row: 18 / span 8;
 }
 
 .resume-skills {
-    width: 60%;
-    margin-inline: auto;
+    grid-column: 9 / span 4;
+    grid-row: 2 / span 16;
 }
 
-.resume-skills > h2 {
-    margin-block-end: 2rem;
+/*///////////  Resume-Skills  ///////////*/
+.skills {
+    grid-column: span 12;
+}
+
+/*///////////  Resume-Education  ///////////*/
+.resume-education-card {
+    grid-column: 1 / span 12;
+    grid-row: 2 / span 2;
+}
+
+
+/*///////////////////////////////////////////////////////
+Resume Grid Layout Mobile
+///////////////////////////////////////////////////////*/
+@media screen and (min-width: 900px) and (max-width: 1200px){
+    .resume-education {
+        grid-column: 1 / span 8;
+        grid-row: 34 / span 8;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 899px){
+    .resume-experiences {
+        grid-column: 1 / span 12;
+        grid-row: 2 / span 32;
+    }
+
+    .resume-education {
+        grid-column: 1 / span 12;
+        grid-row: 50 / span 8;
+    }
+
+    .resume-skills {
+        grid-column: 1 / span 12;
+        grid-row: 34 / span 16;
+    }
+}
+
+@media screen and (max-width: 599px){
+    .resume-experiences {
+        grid-column: 1 / span 12;
+        grid-row: 2 / span 32;
+    }
+
+    .resume-education {
+        grid-column: 1 / span 12;
+        grid-row: 50 / span 8;
+    }
+
+    .resume-skills {
+        grid-column: 1 / span 12;
+        grid-row: 34 / span 16;
+    }
+}
+
+.portfolio {
+    margin-block-end: 5rem;
+}
+
+.portfolio-img {
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 4;
+    transition: all ease-in 300ms;
+    padding: 0; /* overriding card padding */
+}
+
+.portfolio-img a{
+    height: 100%;
+    width: 100%;
+}
+
+.portfolio-img:hover {
+    border: var(--color-tertiary-light) solid 2px;
+    scale: var(--hover-scale);
+    box-shadow:var(--hard-shadow);
+}
+
+.portfolio-description {
+    grid-column: 5 / span 8;
+    grid-row: 1 / span 2;
+
+    user-select: none;
+    text-decoration: none;
+    text-underline: none;
+}
+
+.portfolio-description h2 {
+    text-align: start;
+}
+
+.portfolio-skills {
+    grid-column: 5 / span 8;
+    grid-row: 3 / span 2;
 }
 
 
 
 /*///////////////////////////////////////////////////////
-Index Grid Layout Mobile
+Grid Layout Mobile
 ///////////////////////////////////////////////////////*/
 @media screen and (min-width: 900px) and (max-width: 1200px){
 
 }
 
 @media screen and (min-width: 600px) and (max-width: 899px){
-    .project {
-        grid-column: span 6;
-        grid-row: span 2;
+    .portfolio-img {
+        grid-column: 1 / span 4;
+        grid-row: 1 / span 4;
+    }
+
+    .portfolio-description {
+        grid-column: 5 / span 8;
+        grid-row: 1/ span 4;
+        padding: 1rem;
+    }
+
+    .portfolio-skills {
+        grid-column: 1 / span 12;
+        grid-row: 5 / span 2;
     }
 }
 
 @media screen and (max-width: 599px){
-    .project {
-        grid-column: span 6;
-        grid-row: span 2;
+
+    .portfolio-img {
+        grid-column: 1 / span 12;
+        grid-row: 1 / span 2;
     }
 
-    .resume-skills {
-        width: 100%;
+    .portfolio-description {
+        grid-column: 1 / span 12;
+        grid-row: 3 / span 6;
+        padding: 1rem;
+    }
+
+    .portfolio-skills {
+        grid-column: 1 / span 12;
+        grid-row: 9;
     }
 }
+
+@media screen and (max-width: 450px){
+    .portfolio-description  h2 {
+        font-size: 1rem;
+    }
+
+    .portfolio-description  p {
+        font-size: .825rem;
+        line-height: 1rem;
+    }
+}
+
+.project-img {
+    grid-column: 1 / span 6;
+    grid-row: 1 / span 6;
+
+    position: relative;
+    padding: 0; /* overriding card padding */
+}
+
+.github-link{
+    position: absolute;
+    left: 90%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+
+    width: 3rem;
+    padding: .5rem;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.github-link-img {
+    width: 75%;
+}
+
+.project-description {
+    grid-column: 7 / span 6;
+    grid-row: 1 / span 16;
+}
+
+.project-description h2 {
+    text-align: start;
+    margin-block-end: 1rem;
+}
+
+.project-skills {
+    grid-column: 1 / span 6;
+    grid-row: 7 / span 6;
+}
+
+
+
+/*///////////////////////////////////////////////////////
+Grid Layout Mobile
+///////////////////////////////////////////////////////*/
+@media screen and (min-width: 900px) and (max-width: 1200px){
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 899px){
+    .project-img {
+        grid-column: 1 / span 12;
+        grid-row: 1 / span 12;
+    }
+
+    .project-description {
+        grid-column: 1 / span 12;
+        grid-row: 19 / span 16;
+        padding: 1rem;
+    }
+
+    .project-skills {
+        grid-column: 1 / span 12;
+        grid-row: 13 / span 6;
+    }
+}
+
+@media screen and (max-width: 599px){
+    .project-img {
+        grid-column: 1 / span 12;
+        grid-row: 1 / span 12;
+    }
+
+    .project-description {
+        grid-column: 1 / span 12;
+        grid-row: 19 / span 16;
+        padding: 1rem;
+    }
+
+    .project-skills {
+        grid-column: 1 / span 12;
+        grid-row: 13 / span 6;
+    }
+}
+
+
+
+.about-se {
+    grid-column: 1 / span 4;
+    grid-row: 1;
+}
+
+.about-cr {
+    grid-column: 5 / span 4;
+    grid-row: 1;
+}
+
+.about-dr {
+    grid-column: 9 / span 4;
+    grid-row: 1;
+}
+
+/*///////////////////////////////////////////////////////
+Grid Layout Mobile
+///////////////////////////////////////////////////////*/
+@media screen and (min-width: 900px) and (max-width: 1200px){
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 899px){
+    .about-se {
+        grid-column: 1 / span 6;
+        grid-row: 1;
+    }
+
+    .about-cr {
+        grid-column: 7 / span 6;
+        grid-row: 1;
+    }
+
+    .about-dr {
+        grid-column: 1 / span 6;
+        grid-row: 2;
+    }
+}
+
+@media screen and (max-width: 599px){
+    .about-se {
+        grid-column: 1 / span 12;
+        grid-row: 1;
+    }
+
+    .about-cr {
+        grid-column: 1 / span 12;
+        grid-row: 2;
+    }
+
+    .about-dr {
+        grid-column: 1 / span 12;
+        grid-row: 3;
+    }
+}
+

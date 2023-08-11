@@ -21,108 +21,33 @@
     <link rel="stylesheet" href="css/header.css" />
 
     <!-- JS -->
+    <script src="js/main.js" defer></script>
     <script src="js/partials.js" defer></script>
     <script src="js/skill-box.js" defer></script>
     <script src="js/nav.js" defer></script>
+    <script src="js/dark-mode.js" defer></script>
     <script src="js/bg-circles.js" defer></script>
+    <script src="js/projects.js" defer></script>
 </head>
 
 <body class="dark-mode" data-darkMode="true">
 
 <!-- header section -->
-<header id="header-placeholder"></header>
+<header id="header-placeholder" class="primary-header flex dark-mode" data-darkMode="true"></header>
 
 <main class="container">
-    <canvas id="canvas" class="bgGoo gooey"></canvas>
-    <div class="contentContainer">
-
+    <canvas id="canvas" class="bgGoo"></canvas>
+    <div id="contentContainer">
+        <!--content generated here-->
         <section>
             <h1>Hi, I'm Gage</h1>
-            <p class="tagline center-text">I design unique web & graphic experiences</p>
+            <p class="tagline">I design unique web & graphic experiences</p>
             <a href="mailto:wm.gagejackson@gmail.com" class="btn cta-btn">let's chat!</a>
-        </section>
-
-        <section class="latest-works-container">
-
-            <div class="grid">
-                <h2 class="section-title">Latest works</h2>
-
-                <article class="project card square glass">
-                    <a type="button" href="project-honeydohelper.html">
-                        <img src="assets/imgs/honeydo-01.png" class="glass-image cover">
-                    </a>
-                </article>
-
-                <article class="project card square glass">
-                    <a type="button" href="project-doglister.html">
-                        <img src="assets/imgs/doglister-01.png" class="glass-image cover">
-                    </a>
-                </article>
-
-                <article class="project card square glass">
-                    <a type="button" href="project-weatherapp.html">
-                        <img src="assets/imgs/weatherapp-01.png" class="glass-image cover">
-                    </a>
-                </article>
-            </div>
-        </section>
-
-        <section class="grid">
-            <h2 class="section-title">About me</h2>
-            <article class="about-me-card card glass">
-                <p>Hello there! I'm Gage, a passionate and dedicated software engineer specializing in full-stack web development. I believe in the power of creativity, out-of-the-box thinking, and continuous learning to shape extraordinary solutions. My curiosity fuels my desire to explore new concepts and apply them to create intriguing and innovative applications.</p>
-                <p>There's nothing quite like the exhilaration I feel when confronted with a new problem to solve. I thrive on the challenge, using my analytical mindset and creative prowess to devise innovative solutions. The process of unraveling complex puzzles and transforming ideas into functional systems brings me immense joy and satisfaction.</p>
-                <p>Beyond the realm of coding, there are a couple of other passions that keep me energized. One of them is running. As a dedicated runner, I'm constantly pushing my limits and setting new goals. In fact, I have my sights set on completing my first marathon in the next few years. The discipline, endurance, and determination I've developed through running also translate into my work as a software engineer, where I embrace challenges with discipline and determination.</p>
-                <p>Another area of interest that brings me delight is the world of coffee. I'm an avid coffee enthusiast and have been honing my skills as a home coffee roaster for several years. The art and science behind coffee roasting captivate me, and it's become a creative outlet where I can experiment with flavors and explore my graphic design skills. I often find myself designing labels and branding materials for my personal roasting project, combining my love for aesthetics with the aroma of freshly brewed coffee.</p>
-                <p>Ultimately, my journey as a software engineer is driven by a deep passion for creating meaningful and impactful solutions. I constantly strive to innovate, explore new horizons, and deliver exceptional experiences. If you're interested in collaborating on exciting projects or simply sharing a cup of coffee, I'd love to connect and discuss how we can create something extraordinary together.</p>
-                <p>Let's build the future, one line of code at a time!</p>
-            </article>
-        </section>
-
-        <section class="resume-skills">
-            <h2 class="section-title">My Strengths</h2>
-            <div class="skills">
-                <div class="skill square card glass">
-                    <p>Java</p>
-                </div>
-                <div class="skill square card glass">
-                    <p>Javascript</p>
-                </div>
-                <div class="skill square card glass">
-                    <p>HTML</p>
-                </div>
-                <div class="skill square card glass">
-                    <p>CSS</p>
-                </div>
-                <div class="skill square card glass">
-                    <p>MySQL</p>
-                </div>
-                <div class="skill square card glass">
-                    <p>Spring Boot</p>
-                </div>
-                <div class="skill square card glass">
-                    <p>Thymeleaf</p>
-                </div>
-                <div class="skill square card glass">
-                    <p>Git</p>
-                </div>
-                <div class="skill square card glass">
-                    <p>Illustrator</p>
-                </div>
-                <div class="skill square card glass">
-                    <p>Java</p>
-                </div>
-                <div class="skill square card glass">
-                    <p>jQuery</p>
-                </div>
-                <div class="skill square card glass">
-                    <p>Bootstrap</p>
-                </div>
-            </div>
         </section>
     </div>
 </main>
-<svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="hidden">
     <defs>
         <filter id="blur-contrast-composite">
             <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur" />

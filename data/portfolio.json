@@ -1,47 +1,93 @@
 [
   {
-    "project_name": "Gage",
-    "short_description": "gagermeister",
-    "full_description": "m-_faKcheSfh6jJgn2RNi4aHB2XShSmWx95jaOm_GbXZDbE",
+    "project_name": "Honeydo Helper",
+    "short_name": "honeydo",
+    "tagline": "Group project creating a fullstack web application",
+    "short_description": "Collaborated with a team to design, build, and deploy a mobile-responsive full-stack web application. Served as the project lead, I coordinated development efforts, designed the application structure, and actively contributed to troubleshooting and debugging. ",
+    "full_description": [
+      "As a developer for the Honeydo Helper capstone project, I played a vital role in collaborating with a group of developers to design, plan, build, and deploy a mobile-responsive full-stack web application. In conjunction with my team, we successfully executed the project proposal by creating user stories, developing feature lists, wireframes, storyboards, database diagrams, and a project management board.",
+      "Taking on the responsibility of project lead, I facilitated the coordination and organization of our development efforts. I provided guidance and assistance to team members, ensuring that everyone stayed on track and maintained a unified vision for the application. Moreover, I actively participated in troubleshooting and debugging sessions, offering my expertise and support to resolve issues and optimize code efficiency.",
+      "Throughout the development lifecycle, I took charge of designing the overall structure of the application, ensuring that it adhered to best practices and industry standards. I leveraged my technical skills to implement robust logic, enabling seamless interactions between users and Honeydoers. Additionally, I actively contributed to the Agile workflow, attending morning stand-ups and afternoon demos to ensure effective communication and smooth progress.",
+      "By embracing an Agile methodology, our team was able to foster collaboration, adaptability, and efficient development practices. Our collective efforts led to the successful deployment of the Honeydo Helper web application to AWS.",
+      "Through my involvement in this capstone project, I honed my skills in software engineering, project management, and collaborative problem-solving. I am confident that my experience with Honeydo Helper showcases my ability to contribute to the development of innovative and user-friendly applications as a software engineer."
+    ],
     "images": [
-      "5Z5oXpBc1YN9rz8gXEIjL9lYmzRzdaPctXV2NyMwoX7MnIM",
-      "5Z5oXpBc1YN9rz8gXEIjL9lYmzRzdaPctXV2NyMwoX7MnIM"
+      "assets/imgs/honeydo-01.png",
+      "assets/imgs/honeydo-02.png"
     ],
     "skills": [
-      "5Z5oXpBc1YN9rz8gXEIjL9lYmzRzdaPctXV2NyMwoX7MnIM",
-      "5Z5oXpBc1YN9rz8gXEIjL9lYmzRzdaPctXV2NyMwoX7MnIM"
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "JavaScript",
+      "Java",
+      "Spring Boot",
+      "Spring Boot Security",
+      "Filestack API",
+      "Thymeleaf",
+      "AWS",
+      "Docker"
     ],
-    "link_github": "LcGogwi3lEv5SCdlgEfIOhL8jOK-VW4BNhptrDtJEhJwSLqWgtK3gKPR2wG4L-k2E6D2Gycs38Lvsg",
-    "link_website": "LcGogwi3lEv5SCdlgEfIOhL8jOK-VW4BNhptrDtJEhJwSLqWgtK3gKPR2wG4L-k2E6D2Gycs38Lvsg",
+    "link_github": "https://github.com/HoneyDoHelper/honey-do-helper",
+    "link_website": "https://honeydohelper.xyz"
   },
   {
-    "project_name": "Gage",
-    "short_description": "gagermeister",
-    "full_description": "m-_faKcheSfh6jJgn2RNi4aHB2XShSmWx95jaOm_GbXZDbE",
+    "project_name": "Doglister",
+    "short_name": "doglister",
+    "tagline": "Group project creating a craigslist clone for dogs",
+    "short_description": "Developed a simplified version of Craigslist for finding dogs. My responsibilities included designing and managing the database, implementing robust searching and sorting functionality, and ensuring an accurate display of dog information.",
+    "full_description": [
+      "As a software engineer for the Dogbased Adlister project, I undertook key responsibilities in the development of a simplified version of Craigslist specifically designed for searching and finding available dogs for purchase. This project provided me with valuable experience in web development, database management, and software testing.",
+      "One of my primary responsibilities was creating and managing the database for the application. I designed and implemented the database schema, ensuring its efficiency and scalability. This involved defining the appropriate tables, relationships, and constraints to store the necessary information for dog advertisements.",
+      "In order to enhance user experience, I developed robust searching and sorting functionality. I implemented search algorithms and query optimization techniques to allow users to find specific dogs based on various criteria, such as breed, age, location, and price. Additionally, I implemented sorting mechanisms to present search results in a logical and user-friendly manner.",
+      "Another significant contribution was the implementation of the functionality to display pertinent information based on database queries. I ensured that relevant details about the dogs, such as their descriptions, images, contact information, and any additional attributes, were accurately fetched from the database and displayed to the users in an appealing format.",
+      "By spearheading the creation of the database, implementing powerful searching and sorting functionality, and ensuring the accurate display of information based on queries, I significantly contributed to the success of the Dogbased Adlister project. This experience further solidified my skills in web development, database management, and software testing, making me a valuable candidate for software engineering roles."
+    ],
     "images": [
-      "5Z5oXpBc1YN9rz8gXEIjL9lYmzRzdaPctXV2NyMwoX7MnIM",
-      "5Z5oXpBc1YN9rz8gXEIjL9lYmzRzdaPctXV2NyMwoX7MnIM"
+      "assets/imgs/doglister-01.png",
+      "assets/imgs/doglister-02.png"
     ],
     "skills": [
-      "5Z5oXpBc1YN9rz8gXEIjL9lYmzRzdaPctXV2NyMwoX7MnIM",
-      "5Z5oXpBc1YN9rz8gXEIjL9lYmzRzdaPctXV2NyMwoX7MnIM"
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "JavaScript",
+      "Java",
+      "Spring Boot",
+      "jQuery"
     ],
-    "link_github": "LcGogwi3lEv5SCdlgEfIOhL8jOK-VW4BNhptrDtJEhJwSLqWgtK3gKPR2wG4L-k2E6D2Gycs38Lvsg",
-    "link_website": "LcGogwi3lEv5SCdlgEfIOhL8jOK-VW4BNhptrDtJEhJwSLqWgtK3gKPR2wG4L-k2E6D2Gycs38Lvsg",
+    "link_github": "https://github.com/Jackson-Chhor-Daniels-Newman-Lister/Jackson-Chhor-Daniels-Newman-Lister",
+    "link_website": false
   },
   {
-    "project_name": "Gage",
-    "short_description": "gagermeister",
-    "full_description": "m-_faKcheSfh6jJgn2RNi4aHB2XShSmWx95jaOm_GbXZDbE",
+    "project_name": "Weather App",
+    "short_name": "weather",
+    "tagline": "Solo project creating a weather application",
+    "short_description": "I developed a robust weather application with a clean and intuitive interface, leveraging the OpenWeatherMap API and the Mapbox API to provide accurate forecasts worldwide. The application featured interactive maps, comprehensive weather metrics, and demonstrated my meticulous planning, agile development, and full ownership of the project.",
+    "full_description": [
+      "I undertook the Weather Map project as a solo endeavor, showcasing my ability to independently conceptualize, develop, and deploy a robust weather application.",
+      "With a focus on delivering a seamless user experience, I designed and implemented a clean and intuitive interface that allowed users to effortlessly access accurate weather forecasts for locations around the world.",
+      "To gather the latest weather data, I leveraged the OpenWeatherMap API and the Mapbox API, integrating them seamlessly into the application. This enabled me to provide comprehensive hourly and daily forecasts for various weather metrics, including temperature, precipitation, wind speed, and humidity.",
+      "I took pride in creating an interactive map feature within the application, empowering users to search for their address or conveniently drag and drop a pin to their desired location. This functionality showcased my attention to detail and commitment to delivering a user-centric experience.",
+      "Throughout the project, I demonstrated my ability to plan, develop, and test the application meticulously. I employed agile methodologies to adapt to changing requirements and maintain focus on delivering a high-quality product.",
+      "By completing the Weather Map project independently, I showcased my ability to take full ownership of a project, from ideation to deployment. This experience further honed my technical skills in API integration, data handling, and user interface design."
+    ],
     "images": [
-      "5Z5oXpBc1YN9rz8gXEIjL9lYmzRzdaPctXV2NyMwoX7MnIM",
-      "5Z5oXpBc1YN9rz8gXEIjL9lYmzRzdaPctXV2NyMwoX7MnIM"
+      "assets/imgs/weatherapp-01.png",
+      "assets/imgs/weatherapp-02.png"
     ],
     "skills": [
-      "5Z5oXpBc1YN9rz8gXEIjL9lYmzRzdaPctXV2NyMwoX7MnIM",
-      "5Z5oXpBc1YN9rz8gXEIjL9lYmzRzdaPctXV2NyMwoX7MnIM"
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "JavaScript",
+      "Java",
+      "Ajax",
+      "jQuery",
+      "Open Weather Map API",
+      "Mapbox API"
     ],
-    "link_github": "LcGogwi3lEv5SCdlgEfIOhL8jOK-VW4BNhptrDtJEhJwSLqWgtK3gKPR2wG4L-k2E6D2Gycs38Lvsg",
-    "link_website": "LcGogwi3lEv5SCdlgEfIOhL8jOK-VW4BNhptrDtJEhJwSLqWgtK3gKPR2wG4L-k2E6D2Gycs38Lvsg",
+    "link_github": "https://github.com/GageJackson/weatherMap",
+    "link_website": false
   }
 ]
