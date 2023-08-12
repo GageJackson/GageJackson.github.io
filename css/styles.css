@@ -207,35 +207,6 @@ button[data-darkMode="false"] {
     display: none;
 }
 
-
-/* Button Styles */
-button {
-    background: none;
-    border: none;
-}
-
-.btn {
-    border-radius: var(--border-radius);
-
-    padding-block: 1rem;
-    padding-inline: 2rem;
-}
-
-.cta-btn {
-    color: var(--color-neutral-1);
-    background: var(--color-tertiary-light);
-    border: var(--color-tertiary) solid 2px;
-
-    box-shadow: var(--soft-shadow);
-    transition: var(--transitions);
-}
-
-.cta-btn:hover {
-    background: var(--color-tertiary);
-    box-shadow: var(--soft-shadow-hover);
-    scale: var(--hover-scale);
-}
-
 /* Section Styles */
 /*------------------------*/
 section {
@@ -309,9 +280,10 @@ canvas {
 
 /* Glass */
 .glass {
-    background: hsla(0 0% 50% / 0.15);
-    border-left: var(--color-neutral-3) solid 1px;
-    border-right: var(--color-neutral-3) solid 1px;
+    background: hsla(190, 5%, 48%, 0.15);
+    border-inline: var(--color-neutral-3) solid 1px;
+    border-block-start: var(--color-neutral-2) solid 1px;
+    border-block-end: var(--color-neutral-3) solid 1px;
     backdrop-filter: blur(var(--glass-blur));
     -webkit-backdrop-filter: blur(var(--glass-blur));
     box-shadow: var(--hard-shadow);
@@ -324,10 +296,39 @@ canvas {
     padding: 1rem;
 }
 
+/* Button Styles */
+button {
+    background: none;
+    border: none;
+}
+
+.btn {
+    border-radius: var(--border-radius);
+    padding-block: 1rem;
+    padding-inline: 2rem;
+
+    transition: var(--transitions);
+}
+
+.btn :hover {
+    scale: var(--hover-scale);
+}
+
+.cta-btn {
+    color: var(--color-neutral-1);
+    background: var(--color-tertiary-light);
+    border: var(--color-tertiary) solid 2px;
+
+}
+
+.cta-btn :hover {
+    background: var(--color-tertiary);
+}
+
 /* Skills */
 .skill {
     width: 72px !important;
-    padding: .5rem;
+    padding: .25rem;
     font-size: var(--fs-100);
 
     display: flex;
