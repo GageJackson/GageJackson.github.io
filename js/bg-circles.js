@@ -12,6 +12,7 @@ canvas.height = window.innerHeight;
 
 let cw = canvas.width;
 let ch = canvas.height;
+let ca = cw * ch;
 
 // fps
 let fps = 0;
@@ -21,7 +22,9 @@ let accumulatedFrames = 0;
 let numCircles = 30;
 let circles = [];
 let velocity = 1;
-let size = (150 * (cw / 1000));
+// let size = ((ca * .15) / (numCircles * numCircles));
+let size = Math.min(cw, ch) * 6 / numCircles;
+
 // console.log(size);
 
 function main(timestamp) {
@@ -46,7 +49,7 @@ function main(timestamp) {
         accumulatedTime -= 1000;
     }
 
-    // logic update - if machine slow then do multiple steps to catch up
+    // logic update - if machine is slow then do multiple steps to catch up
     while (elapsedTime >= updateRate) {
         update();
         elapsedTime -= updateRate;
@@ -95,7 +98,7 @@ function render() {
 
 // create the circles
 for (let i = 0; i < numCircles; i++) {
-    let randSize = (Math.random() * size) + 0;
+    let randSize = (Math.random() * size) + 10;
 
     // Create a radial gradient
     const gradient = ctx.createRadialGradient((cw/2), 0, 0, (cw/2), 0, Math.max(ch,cw));
@@ -106,8 +109,8 @@ for (let i = 0; i < numCircles; i++) {
     circles.push({
         size: randSize,
         gradient: gradient,
-        x: (Math.random() - 0.5)* cw/2 + cw/2,
-        y: (Math.random() - 0.5)* ch/2 + ch/2,
+        x: (Math.random() - 0.5) * cw + cw/2,
+        y: (Math.random() - 0.5) * ch + ch/2,
         vx: (Math.random() - 0.5) * velocity * 1,
         vy: (Math.random() - 0.5) * velocity * 1
     });

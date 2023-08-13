@@ -2,9 +2,7 @@ async function fetchPortfolio(){
     const response = await fetch('data/portfolio.json');
     const projectData = await response.json();
 
-
     setPortfolioHtml(projectData);
-    formatSkillsBox();
     createProjectLinks();
 }
 
@@ -44,25 +42,23 @@ function getPortfolioHtml(projectData){
     html += `<a href="mailto:wm.gagejackson@gmail.com" class="btn cta-btn">ask me questions</a>`;
     html += `</section>`;
 
+    html += `<section class="portfolio flex-col">`;
     for (const project of projectData) {
-        html += `<section>`;
+
         html += `<article>`;
-        html += `<button class="portfolio grid dark-mode" id="${project.short_name}-btn" data-darkMode="true">`;
+        html += `<button class="dark-mode portfolio-project btn glass" 
+                    id="${project.short_name}-btn" data-darkMode="true">`;
 
-        html += `<div class="portfolio-img card glass">`;
-        html += `<img src="${project.images[0]}" class="glass-image cover">`;
+        html += `<img src="${project.images[0]}" class="glass-image">`;
+        html += `<div class="">`;
+        html += `<h3>${project.project_name}</h3>`;
+        html += `<p>${project.tagline}</p>`;
         html += `</div>`;
 
-        html += `<div class="portfolio-description card glass">`;
-        html += `<h2 class="">${project.project_name}</h2>`;
-        html += `<p>${project.short_description}</p>`;
-        html += `</div>`;
-
-        html += getSkillsHtml(project, 'portfolio');
         html += `</button>`;
         html += `</article>`;
-        html += `</section>`;
     }
+    html += `</section>`;
 
     return html;
 }

@@ -1,6 +1,6 @@
 
 
-.skill a{
+.links a{
     width: 100%;
     aspect-ratio: 1;
 
@@ -9,12 +9,13 @@
     justify-content: center;
 }
 
-.skill img{
+.links img{
     opacity: 50%;
     mix-blend-mode: overlay;
 
     width: 75%;
 }
+
 
 .resume-title {
     text-align: start;
@@ -109,90 +110,50 @@ Resume Grid Layout Mobile
 }
 
 .portfolio {
-    margin-block-end: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
 }
 
-.portfolio-img {
-    grid-column: 1 / span 4;
-    grid-row: 1 / span 4;
-}
-
-.portfolio-img a{
-    height: 100%;
+.portfolio-project {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap);
+    padding: 0; /* overriding card padding */
+    padding-inline-end: var(--card-padding);
     width: 100%;
+    max-height: 8rem;
+}
+
+.portfolio-project img {
+    height: 8rem;
+    width: 8rem;
+}
+
+@media screen and (min-width: 600px){
+    .portfolio {
+        flex-direction: row;
+    }
+
+    .portfolio-project {
+        flex-direction: column;
+        padding: var(--card-padding);
+        max-height: none;
+        width: auto;
+        height: 100%;
+        max-width: calc(100vw / 3 - (2 * var(--gap)));
+    }
+
+    .portfolio-project img {
+        justify-self: center;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+    }
 }
 
 
-.portfolio-description {
-    grid-column: 5 / span 8;
-    grid-row: 1 / span 2;
 
-    user-select: none;
-    text-decoration: none;
-    text-underline: none;
-}
-
-.portfolio-skills {
-    grid-column: 5 / span 8;
-    grid-row: 3 / span 2;
-}
-
-
-
-/*///////////////////////////////////////////////////////
-Grid Layout Mobile
-///////////////////////////////////////////////////////*/
-@media screen and (min-width: 900px) and (max-width: 1200px){
-
-}
-
-@media screen and (min-width: 600px) and (max-width: 899px){
-    .portfolio-img {
-        grid-column: 1 / span 4;
-        grid-row: 1 / span 4;
-    }
-
-    .portfolio-description {
-        grid-column: 5 / span 8;
-        grid-row: 1/ span 4;
-        padding: 1rem;
-    }
-
-    .portfolio-skills {
-        grid-column: 1 / span 12;
-        grid-row: 5 / span 2;
-    }
-}
-
-@media screen and (max-width: 599px){
-
-    .portfolio-img {
-        grid-column: 1 / span 12;
-        grid-row: 1 / span 2;
-    }
-
-    .portfolio-description {
-        grid-column: 1 / span 12;
-        grid-row: 3 / span 6;
-        padding: 1rem;
-    }
-
-    .portfolio-skills {
-        grid-column: 1 / span 12;
-        grid-row: 9;
-    }
-}
-
-@media screen and (max-width: 450px){
-    .portfolio-description  h2 {
-        font-size: 1rem;
-    }
-
-    .portfolio-description  p {
-        font-size: .825rem;
-        line-height: 1rem;
-    }
-}
 
 .project-img {
     grid-column: 1 / span 6;
