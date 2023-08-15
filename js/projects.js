@@ -1,4 +1,4 @@
-async function fetchPortfolio(){
+async function createPortfolioPage(){
     const response = await fetch('data/portfolio.json');
     const projectData = await response.json();
 
@@ -6,7 +6,7 @@ async function fetchPortfolio(){
     createProjectLinks();
 }
 
-async function fetchProject(projectName){
+async function createProjectPage(projectName){
     const response = await fetch('data/portfolio.json');
     const projectData = await response.json();
 
@@ -29,7 +29,7 @@ function setBackBtn(){
     const btnBack = document.getElementById('back-btn');
 
     btnBack.addEventListener('click', async () => {
-        await fetchPortfolio();
+        await createPortfolioPage();
     });
 }
 
@@ -46,13 +46,13 @@ function getPortfolioHtml(projectData){
     for (const project of projectData) {
 
         html += `<article>`;
-        html += `<button class="dark-mode portfolio-project btn glass" 
+        html += `<button class="dark-mode portfolio-project flex-row btn glass" 
                     id="${project.short_name}-btn" data-darkMode="true">`;
 
         html += `<img src="${project.images[0]}" class="glass-image">`;
-        html += `<div class="">`;
-        html += `<h3>${project.project_name}</h3>`;
-        html += `<p>${project.tagline}</p>`;
+        html += `<div>`;
+        html += `<h3 class="text-start">${project.project_name}</h3>`;
+        html += `<p class="text-start">${project.tagline}</p>`;
         html += `</div>`;
 
         html += `</button>`;
@@ -75,28 +75,30 @@ function getProjectHtml(projectData, projectName) {
             html += `</section>`;
 
             html += `<section class="grid">`;
-            html += `<button id="back-btn" class="btn cta-btn">`
-            html += `Back to Portfolio`
-            html += `</button>`
+            html += `<div class="project-primary flex-col">`;
+            html += `<div class="project-img square card glass relative padding-0">`;
 
-            html += `<div class="project-img square card glass">`;
-            html += `<a type="button" href="${project.link_github}" class="github-link square card cta-btn">`;
-            html += `<img src="assets/icons/github-sign.png" class="github-link-img square">`;
+            html += `<a type="button" href="${project.link_github}" class="github-link square card cta-btn flex-row justify-center align-items-center">`;
+            html += `<img src="assets/icons/github-sign.png" class="square">`;
             html += `</a>`;
             html += `<img src="${project.images[0]}" class="cover">`;
-            html += `</div>`;
+            html += `</div>`;//end project image div
+
+            html += getSkillsHtml(project);
+            html += `<button id="back-btn" class="btn cta-btn align-self-center">`
+            html += `Back to Portfolio`
+            html += `</button>`
+            html += `</div>`;//end project primary div
 
             html += getDescriptionHtml(project);
-            html += getSkillsHtml(project, 'project');
             html += `</section>`;
         }
     }
     return html;
 }
 
-function getSkillsHtml(project, placement){
+function getSkillsHtml(project){
     let html = "";
-    html += `<div class="${placement}-skills">`;
     html += `<div class="skills">`;
 
     for (const skill of project.skills) {
@@ -105,7 +107,6 @@ function getSkillsHtml(project, placement){
         html += `</div>`;
     }
 
-    html += `</div>`;
     html += `</div>`;
     return html;
 }

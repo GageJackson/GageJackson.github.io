@@ -9,7 +9,7 @@ function setButtons(){
     btnAbout.addEventListener('click', async () => changeContent('about'));
 
     btnPortfolio.addEventListener('click', async () => {
-        await fetchPortfolio();
+        await createPortfolioPage();
         setDarkMode();
     });
 
@@ -33,15 +33,15 @@ function createProjectLinks(){
     const btnHoneydo = document.getElementById('honeydo-btn');
 
     btnDoglister.addEventListener('click', async () => {
-        await fetchProject('doglister');
+        await createProjectPage('doglister');
     });
 
     btnWeather.addEventListener('click', async () => {
-        await fetchProject('weather');
+        await createProjectPage('weather');
     });
 
     btnHoneydo.addEventListener('click', async () => {
-        await fetchProject('honeydo');
+        await createProjectPage('honeydo');
     });
 }
 
