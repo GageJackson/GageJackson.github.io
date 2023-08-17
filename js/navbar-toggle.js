@@ -14,3 +14,14 @@ function setNav() {
         }
     });
 }
+
+function closeNav(){
+    const primaryNav = document.querySelector('.primary-nav');
+    const navToggle = document.querySelector('.mobile-nav-toggle');
+    const visibility = primaryNav.getAttribute("data-visible");
+
+    if(visibility === "true"){
+        primaryNav.setAttribute("data-visible", "false");
+        navToggle.setAttribute("aria-expanded", "false");
+    }
+}

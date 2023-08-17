@@ -1,4 +1,4 @@
-function setDarkMode(){
+function enableDarkMode(){
     const darkModeToggle = document.querySelector('#dark-mode-toggle');
     const darkElements = document.querySelectorAll('.dark-mode');
     const darkModeStorage = localStorage.getItem("darkMode");
