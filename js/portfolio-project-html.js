@@ -83,8 +83,9 @@ function getProjectButtonHtml(project) {
                 <div>
                     <h3 class="text-start">${project.project_name}</h3>
                     <p class="text-start">${project.tagline}</p>
-                    
-                    <div class="btn cta-btn display-block">
+                </div>
+                <div>
+                    <div class="btn cta-btn proj-btn display-block">
                         <span>Take a look!</span>
                     </div>
                 </div>
