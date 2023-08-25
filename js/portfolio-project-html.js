@@ -24,9 +24,13 @@ function getProjectHtml(project) {
         <section class="grid">
             <div class="project-primary flex-col">
                 <div class="project-img square card glass relative padding-0">
-                    <a type="button" href="${project.link_github}" class="github-link square card cta-btn flex-row justify-center align-items-center">
-                        <img src="assets/icons/github-sign.png" class="square">
-                    </a>
+                    <div class="project-links flex-row justify-end">
+                        <a type="button" href="${project.link_github}" target="_blank" class="project-link square card cta-btn flex-row justify-center align-items-center">
+                            <img src="assets/icons/github-sign.png" class="square">
+                        </a>
+                        ${getLiveSite(project.link_website)}
+                    </div>
+                    
                     <img src="${project.images[0]}" class="cover">
                 </div>
                 
@@ -92,4 +96,19 @@ function getProjectButtonHtml(project) {
             </button>
         </article>
     `;
+}
+
+function getLiveSite(liveSite){
+ if (liveSite === '#'){
+     return `
+            
+            `
+ } else {
+     return `
+            <a type="button" href="${liveSite}" target="_blank"
+            class="project-link square card cta-btn flex-row justify-center align-items-center">
+                <img src="assets/icons/download-symbol.png" class="square">
+            </a>
+            `
+ }
 }

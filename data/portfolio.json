@@ -29,7 +29,7 @@
       "Docker"
     ],
     "link_github": "https://github.com/HoneyDoHelper/honey-do-helper",
-    "link_website": "https://honeydohelper.xyz"
+    "link_website": "http://honeydohelper.xyz"
   },
   {
     "project_name": "Doglister",
@@ -57,7 +57,7 @@
       "jQuery"
     ],
     "link_github": "https://github.com/Jackson-Chhor-Daniels-Newman-Lister/Jackson-Chhor-Daniels-Newman-Lister",
-    "link_website": false
+    "link_website": "#"
   },
   {
     "project_name": "Weather App",
@@ -88,6 +88,6 @@
       "Mapbox API"
     ],
     "link_github": "https://github.com/GageJackson/weatherMap",
-    "link_website": false
+    "link_website": "#"
   }
 ]

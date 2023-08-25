@@ -456,18 +456,23 @@ p {
     height: 100%;
 }
 
-.github-link{
+.project-links{
     position: absolute;
-    left: 90%;
-    top: 10%;
-    transform: translate(-50%, -50%);
+    left: 95%;
+    top: 5%;
+    transform: translate(-100%, 0%);
 
-    width: 3rem;
-    padding: .5rem;
+    width: 7rem;
     z-index: 10;
 }
 
-.github-link img {
+.project-link{
+    width: 3rem;
+    padding: .25rem;
+}
+
+.project-link img {
+    opacity: .75;
     width: 75%;
 }
 
