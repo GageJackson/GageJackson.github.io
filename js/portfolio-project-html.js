@@ -107,7 +107,7 @@ function getLiveSite(liveSite){
      return `
             <a type="button" href="${liveSite}" target="_blank"
             class="project-link square card cta-btn flex-row justify-center align-items-center">
-                <img src="assets/icons/download-symbol.png" class="square">
+                <img src="assets/icons/web.png" class="square">
             </a>
             `
  }
