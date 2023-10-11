@@ -1,5 +1,50 @@
 [
   {
+    "project_name": "League of Friendship",
+    "short_name": "lof",
+    "tagline": "Passion project for friends to track League of Legends stats",
+    "short_description": "League of Friendship is a project designed to help you and your friends efficiently track and analyze post-game statistics for League of Legends matches. It leverages the Riot API to gather player and match data and presents it in a user-friendly interface.",
+    "full_description": [
+      "Our League of Legends Post-Game Stats Tracker is a dedicated application designed for League of Legends enthusiasts who are passionate about diving into the intricate world of post-game statistics. This project was initiated to provide an in-depth post-match analysis for a close-knit group of friends and to showcase a wide array of front-end and back-end software engineering skills. Leveraging the Riot API to source data, this application offers a specialized and limited scope to accommodate the API's constraints and the available storage.",
+      "The application's home page serves as the central hub for accessing essential insights into your group's last 100 League of Legends matches. It categorizes matches into one of three types and conveniently highlights any unprocessed matches. You have the flexibility to sort these matches based on specific friends or multiple friends, enabling you to identify games where selected friends played together within the last 100 games. Additionally, the database can be refreshed to acquire new matches and ensure you're always up-to-date with the latest statistical information.",
+      "When you enter a match, you embark on a journey of comprehensive analysis, featuring several key sections. The \"Overview Section\" offers a high-level perspective of the match, showcasing relevant team and player statistics. The \"Timeline Section\" provides an interactive timeline that displays player kills and deaths, visually indicating their locations on the in-game map. You can hover over a kill event tile to identify the precise location, and individual player toggles allow you to focus on specific performance metrics.",
+      "The \"Graph Section\" utilizes Apex Charts to present team advantage charts, team comparison charts, and individual player charts, allowing for customized player performance comparisons. The \"Stat Section\" offers a detailed breakdown of statistics, categorized for easy exploration. It uses rings to visually distinguish between the blue and red teams and provides a percentage comparison for each player's performance. Lastly, the \"Participant Section\" offers in-depth insights into individual player stats, their build path, and performance graphs. You can delve into end-game statistics, analyze item purchases, runes used, and skill progression in a player's League of Legends journey."
+    ],
+    "images": [
+      "assets/imgs/lof-01.png",
+      "assets/imgs/lof-02.png",
+      "assets/imgs/lof-03.png",
+      "assets/imgs/lof-04.png",
+      "assets/imgs/lof-05.png",
+      "assets/imgs/lof-06.png",
+      "assets/imgs/lof-07.png",
+      "assets/imgs/lof-08.png",
+      "assets/imgs/lof-09.png",
+      "assets/imgs/lof-10.png",
+      "assets/imgs/lof-11.png",
+      "assets/imgs/lof-12.png",
+      "assets/imgs/lof-13.png",
+      "assets/imgs/lof-14.png",
+      "assets/imgs/lof-15.png",
+      "assets/imgs/lof-16.png",
+      "assets/imgs/lof-17.png",
+      "assets/imgs/lof-18.png"
+    ],
+    "skills": [
+      "Java",
+      "Spring Boot",
+      "Thymeleaf",
+      "Riot API",
+      "Apex Charts",
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "JavaScript"
+    ],
+    "link_github": "https://github.com/GageJackson/lof",
+    "link_website": "#"
+  },
+  {
     "project_name": "Honeydo Helper",
     "short_name": "honeydo",
     "tagline": "Group project creating a fullstack web application",
@@ -16,17 +61,17 @@
       "assets/imgs/honeydo-02.png"
     ],
     "skills": [
-      "HTML",
-      "CSS",
-      "Bootstrap",
-      "JavaScript",
       "Java",
       "Spring Boot",
       "Spring Boot Security",
       "Filestack API",
       "Thymeleaf",
       "AWS",
-      "Docker"
+      "Docker",
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "JavaScript"
     ],
     "link_github": "https://github.com/HoneyDoHelper/honey-do-helper",
     "link_website": "http://honeydohelper.xyz"
@@ -48,13 +93,13 @@
       "assets/imgs/doglister-02.png"
     ],
     "skills": [
+      "Java",
+      "Spring Boot",
+      "jQuery",
       "HTML",
       "CSS",
       "Bootstrap",
-      "JavaScript",
-      "Java",
-      "Spring Boot",
-      "jQuery"
+      "JavaScript"
     ],
     "link_github": "https://github.com/Jackson-Chhor-Daniels-Newman-Lister/Jackson-Chhor-Daniels-Newman-Lister",
     "link_website": "#"
@@ -77,15 +122,15 @@
       "assets/imgs/weatherapp-02.png"
     ],
     "skills": [
-      "HTML",
-      "CSS",
-      "Bootstrap",
-      "JavaScript",
       "Java",
       "Ajax",
       "jQuery",
       "Open Weather Map API",
-      "Mapbox API"
+      "Mapbox API",
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "JavaScript"
     ],
     "link_github": "https://github.com/GageJackson/weatherMap",
     "link_website": "#"
