@@ -31,7 +31,17 @@ function getProjectHtml(project) {
                         ${getLiveSite(project.link_website)}
                     </div>
                     
-                    <img src="${project.images[0]}" class="cover">
+                    <img id="project-img" src="${project.images[0]}" class="cover">
+                </div>
+                
+                <div class="flex-row justify-between">
+                    <button id="prevImg-btn" class="btn cta-btn" onclick="prevImgBtn(${project.images.length})">
+                        prev
+                    </button>
+                    
+                    <button id="nextImg-btn" class="btn cta-btn" onclick="nextImgBtn(${project.images.length})">
+                        next
+                    </button>
                 </div>
                 
                 ${getSkillsHtml(project)}
@@ -44,6 +54,38 @@ function getProjectHtml(project) {
             ${getDescriptionHtml(project)}
         </section>
     `;
+}
+
+let projectImageCurrent = 0;
+
+function prevImgBtn(projectImgCount){
+    if (projectImageCurrent === 1){
+        projectImageCurrent = projectImgCount;
+    } else {
+        projectImageCurrent -= 1;
+    }
+    changeImage();
+}
+
+function nextImgBtn(projectImgCount){
+    if (projectImageCurrent === projectImgCount){
+        projectImageCurrent = 1;
+    } else {
+        projectImageCurrent += 1;
+    }
+    changeImage();
+}
+
+function changeImage(){
+    let projectImage = document.getElementById("project-img");
+    let imgLink = projectImage.src;
+    let imgLinkBase = imgLink.slice(0, imgLink.lastIndexOf('-') + 1);
+
+    if (projectImageCurrent < 10){
+        projectImage.src = imgLinkBase + '0' + projectImageCurrent + '.png';
+    } else {
+        projectImage.src = imgLinkBase + projectImageCurrent + '.png';
+    }
 }
 
 function getEmailPromptHTML(){

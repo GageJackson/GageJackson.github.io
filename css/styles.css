@@ -391,6 +391,8 @@ p {
 .glass-image {
     mix-blend-mode: hard-light;
     opacity: 85%;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* Shapes--------- */
@@ -454,6 +456,11 @@ p {
     object-position: top;
     width: 100%;
     height: 100%;
+}
+
+.contain{
+    object-fit: contain;
+    object-position: center;
 }
 
 .project-links{

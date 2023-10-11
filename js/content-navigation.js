@@ -29,7 +29,8 @@ function initializeProjectButtons(){
     const buttons = {
         doglister: document.getElementById('doglister-btn'),
         weather: document.getElementById('weather-btn'),
-        honeydo: document.getElementById('honeydo-btn')
+        honeydo: document.getElementById('honeydo-btn'),
+        lof: document.getElementById('lof-btn')
     };
 
     for (const projectName in buttons) {
