@@ -56,38 +56,6 @@ function getProjectHtml(project) {
     `;
 }
 
-let projectImageCurrent = 0;
-
-function prevImgBtn(projectImgCount){
-    if (projectImageCurrent === 1){
-        projectImageCurrent = projectImgCount;
-    } else {
-        projectImageCurrent -= 1;
-    }
-    changeImage();
-}
-
-function nextImgBtn(projectImgCount){
-    if (projectImageCurrent === projectImgCount){
-        projectImageCurrent = 1;
-    } else {
-        projectImageCurrent += 1;
-    }
-    changeImage();
-}
-
-function changeImage(){
-    let projectImage = document.getElementById("project-img");
-    let imgLink = projectImage.src;
-    let imgLinkBase = imgLink.slice(0, imgLink.lastIndexOf('-') + 1);
-
-    if (projectImageCurrent < 10){
-        projectImage.src = imgLinkBase + '0' + projectImageCurrent + '.png';
-    } else {
-        projectImage.src = imgLinkBase + projectImageCurrent + '.png';
-    }
-}
-
 function getEmailPromptHTML(){
     return `
         <div class="btn cta-btn display-block">
@@ -153,4 +121,37 @@ function getLiveSite(liveSite){
             </a>
             `
  }
+}
+
+
+let projectImageCurrent = 0;
+
+function prevImgBtn(projectImgCount){
+    if (projectImageCurrent <= 1){
+        projectImageCurrent = projectImgCount;
+    } else {
+        projectImageCurrent -= 1;
+    }
+    changeImage();
+}
+
+function nextImgBtn(projectImgCount){
+    if (projectImageCurrent >= projectImgCount){
+        projectImageCurrent = 1;
+    } else {
+        projectImageCurrent += 1;
+    }
+    changeImage();
+}
+
+function changeImage(){
+    let projectImage = document.getElementById("project-img");
+    let imgLink = projectImage.src;
+    let imgLinkBase = imgLink.slice(0, imgLink.lastIndexOf('-') + 1);
+
+    if (projectImageCurrent < 10){
+        projectImage.src = imgLinkBase + '0' + projectImageCurrent + '.png';
+    } else {
+        projectImage.src = imgLinkBase + projectImageCurrent + '.png';
+    }
 }

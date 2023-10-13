@@ -58,7 +58,12 @@
     ],
     "images": [
       "assets/imgs/honeydo-01.png",
-      "assets/imgs/honeydo-02.png"
+      "assets/imgs/honeydo-02.png",
+      "assets/imgs/honeydo-03.png",
+      "assets/imgs/honeydo-04.png",
+      "assets/imgs/honeydo-05.png",
+      "assets/imgs/honeydo-06.png",
+      "assets/imgs/honeydo-07.png"
     ],
     "skills": [
       "Java",
@@ -90,7 +95,12 @@
     ],
     "images": [
       "assets/imgs/doglister-01.png",
-      "assets/imgs/doglister-02.png"
+      "assets/imgs/doglister-02.png",
+      "assets/imgs/doglister-03.png",
+      "assets/imgs/doglister-04.png",
+      "assets/imgs/doglister-05.png",
+      "assets/imgs/doglister-06.png",
+      "assets/imgs/doglister-07.png"
     ],
     "skills": [
       "Java",
